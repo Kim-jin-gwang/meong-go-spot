@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:tc:postgresql:17-alpine:///app}
+    username: ${SPRING_DATASOURCE_USERNAME:app}
+    password: ${SPRING_DATASOURCE_PASSWORD:app-test-only}
+    hikari:
+      maximum-pool-size: 4
+      minimum-idle: 0
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    locations: classpath:db/migration,classpath:db/testmigration
+
+# 테스트 소스 전용 값. 배포 artifact에는 포함되지 않는다.
+PHONE_DATA_ENCRYPTION_KEYRING_PATH: classpath:security/phone-test-keyring.json
+PHONE_LOOKUP_HMAC_KEY_V1: QkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkI=
+PHONE_OTP_HMAC_KEY_V1: Q0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0M=
+AUTH_IP_HMAC_KEY_V1: REREREREREREREREREREREREREREREREREREREREREQ=
+AUTH_LOGIN_ID_HMAC_KEY_V1: RUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUU=
+SMS_PROVIDER: FAKE
+
+# 승인된 운영 데이터가 아닌 위치 기능 테스트 전용 fixture.
+REGION_CODE_DATA_PATH: classpath:location/regions-test.csv
+REGION_CODE_DATA_VERSION: test-v1
+REGION_CODE_DATA_SHA256: 5db65418e6c6d59e0065f17344bf88340d81fe31e12903b42d5a527675a73ce1
+LOCATION_DATA_ENCRYPTION_KEYRING_PATH: classpath:security/location-test-keyring.json
+FCM_TOKEN_ENCRYPTION_KEYRING_PATH: classpath:security/fcm-token-test-keyring.json
+FCM_TOKEN_LOOKUP_HMAC_KEY_V1: R0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0c=

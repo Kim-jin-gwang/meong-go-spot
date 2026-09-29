@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 보호 동물 등록의 "촬영" 이 카메라 앱에 내주는 자리. CameraCaptureFiles 와 경로가 같아야 한다. -->
+<paths>
+    <cache-path name="camera" path="camera/" />
+</paths>

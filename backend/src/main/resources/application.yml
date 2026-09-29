@@ -1,0 +1,75 @@
+spring:
+  config:
+    import:
+      - optional:configtree:/run/secrets/
+      - optional:file:${REDIS_CREDENTIALS_PATH:.secrets/redis/credentials.properties}
+  application:
+    name: backend
+  profiles:
+    # 로컬 실행 기본값. 운영은 compose.prod.yml이 SPRING_PROFILES_ACTIVE=prod로 덮어쓴다.
+    default: dev
+  datasource:
+    # 로컬 기본값은 compose.dev.yml의 postgres와 일치한다. 운영 값은 env로 주입.
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/app}
+    username: ${SPRING_DATASOURCE_USERNAME:app}
+    password: ${SPRING_DATASOURCE_PASSWORD:app-local-only}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  data:
+    redis:
+      repositories:
+        enabled: false
+      url: ${SPRING_DATA_REDIS_URL:redis://localhost:6379}
+      connect-timeout: 2s
+      timeout: 2s
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  mvc:
+    problemdetails:
+      enabled: false
+  servlet:
+    multipart:
+      max-file-size: 10485760B
+      max-request-size: 52428800B
+      file-size-threshold: 0B
+  web:
+    error:
+      include-exception: false
+      include-message: never
+      include-stacktrace: never
+      include-binding-errors: never
+      include-path: always
+
+# direct peer를 확인한 뒤 인증 코드가 신뢰 proxy header를 직접 해석한다.
+server:
+  forward-headers-strategy: none
+
+logging:
+  level:
+    # DB 제약 위반의 DETAIL에는 식별자·전화 hash가 포함될 수 있다.
+    org.hibernate.engine.jdbc.spi.SqlExceptionHelper: OFF
+    org.hibernate.orm.jdbc.error: OFF
+    org.hibernate.orm.jdbc.bind: OFF
+    org.hibernate.orm.jdbc.extract: OFF
+
+matching:
+  model-id: ${MATCH_MODEL_ID:dinov2_vitb14}
+  model-version: ${MATCH_MODEL_VERSION:v2}
+
+fcm:
+  chat:
+    enabled: ${FCM_CHAT_ENABLED:false}
+    credentials-path: ${FCM_CREDENTIALS_PATH:}
+    project-id: ${FCM_PROJECT_ID:}
+    poll-interval: ${FCM_CHAT_POLL_INTERVAL:PT5S}
+    lease-duration: ${FCM_CHAT_LEASE_DURATION:PT30S}
+    timeout: ${FCM_SEND_TIMEOUT:PT10S}
+  daily-summary:
+    enabled: ${FCM_DAILY_SUMMARY_ENABLED:false}
+    credentials-path: ${FCM_CREDENTIALS_PATH:}
+    project-id: ${FCM_PROJECT_ID:}
+    poll-interval: ${FCM_DAILY_SUMMARY_POLL_INTERVAL:PT1M}
+    timeout: ${FCM_SEND_TIMEOUT:PT10S}

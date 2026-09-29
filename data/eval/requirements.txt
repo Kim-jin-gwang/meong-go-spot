@@ -1,0 +1,2 @@
+# 평가 하네스 의존성 — CI data-check 와 서버 2(~/ai/.venv 에 numpy 2.5.2 있음) 공통
+numpy==2.5.2

@@ -1,0 +1,278 @@
+{
+ "months": {
+  "202609": {
+   "records": 563,
+   "jobs": 1126,
+   "saved": 1120,
+   "missing": 6,
+   "bytes": 373555200,
+   "seconds": 56.21301865577698
+  },
+  "202401": {
+   "records": 8127,
+   "jobs": 8309,
+   "saved": 8276,
+   "missing": 33,
+   "bytes": 2109204480,
+   "seconds": 1077.819845199585
+  },
+  "202402": {
+   "records": 7383,
+   "jobs": 7569,
+   "saved": 7534,
+   "missing": 35,
+   "bytes": 1948907520,
+   "seconds": 349.3989772796631
+  },
+  "202403": {
+   "records": 7994,
+   "jobs": 8291,
+   "saved": 8243,
+   "missing": 48,
+   "bytes": 2693498880,
+   "seconds": 524.6549627780914
+  },
+  "202404": {
+   "records": 9186,
+   "jobs": 9594,
+   "saved": 9542,
+   "missing": 52,
+   "bytes": 2462197760,
+   "seconds": 506.0822410583496
+  },
+  "202405": {
+   "records": 10611,
+   "jobs": 11464,
+   "saved": 11389,
+   "missing": 75,
+   "bytes": 2953809920,
+   "seconds": 544.0922093391418
+  },
+  "202406": {
+   "records": 9350,
+   "jobs": 12243,
+   "saved": 12155,
+   "missing": 88,
+   "bytes": 3067719680,
+   "seconds": 407.21483755111694
+  },
+  "202407": {
+   "records": 10603,
+   "jobs": 21181,
+   "saved": 21029,
+   "missing": 152,
+   "bytes": 5294376960,
+   "seconds": 816.6289920806885
+  },
+  "202408": {
+   "records": 8760,
+   "jobs": 17515,
+   "saved": 17381,
+   "missing": 134,
+   "bytes": 4424212480,
+   "seconds": 794.4701220989227
+  },
+  "202409": {
+   "records": 8526,
+   "jobs": 17050,
+   "saved": 16927,
+   "missing": 123,
+   "bytes": 4357867520,
+   "seconds": 715.293888092041
+  },
+  "202410": {
+   "records": 9916,
+   "jobs": 19832,
+   "saved": 19553,
+   "missing": 279,
+   "bytes": 4950169600,
+   "seconds": 866.0832242965698
+  },
+  "202411": {
+   "records": 7847,
+   "jobs": 15693,
+   "saved": 15135,
+   "missing": 558,
+   "bytes": 4003399680,
+   "seconds": 655.0413951873779
+  },
+  "202412": {
+   "records": 7025,
+   "jobs": 14049,
+   "saved": 13401,
+   "missing": 648,
+   "bytes": 3475927040,
+   "seconds": 764.8896844387054
+  },
+  "202501": {
+   "records": 5977,
+   "jobs": 11954,
+   "saved": 11401,
+   "missing": 553,
+   "bytes": 2963896320,
+   "seconds": 602.1729607582092
+  },
+  "202502": {
+   "records": 6216,
+   "jobs": 12431,
+   "saved": 11890,
+   "missing": 541,
+   "bytes": 3044096000,
+   "seconds": 741.7573094367981
+  },
+  "202503": {
+   "records": 7351,
+   "jobs": 14697,
+   "saved": 14032,
+   "missing": 665,
+   "bytes": 3652454400,
+   "seconds": 687.3127734661102
+  },
+  "202504": {
+   "records": 8497,
+   "jobs": 16993,
+   "saved": 16306,
+   "missing": 687,
+   "bytes": 7378513920,
+   "seconds": 830.9255955219269
+  },
+  "202505": {
+   "records": 9660,
+   "jobs": 19319,
+   "saved": 18547,
+   "missing": 772,
+   "bytes": 8695040000,
+   "seconds": 914.1818475723267
+  },
+  "202506": {
+   "records": 9538,
+   "jobs": 19075,
+   "saved": 18317,
+   "missing": 758,
+   "bytes": 10668165120,
+   "seconds": 967.7098624706268
+  },
+  "202507": {
+   "records": 8893,
+   "jobs": 17781,
+   "saved": 17073,
+   "missing": 708,
+   "bytes": 6375178240,
+   "seconds": 999.3461310863495
+  },
+  "202508": {
+   "records": 7867,
+   "jobs": 15733,
+   "saved": 15079,
+   "missing": 654,
+   "bytes": 4452986880,
+   "seconds": 698.7234327793121
+  },
+  "202509": {
+   "records": 9087,
+   "jobs": 18170,
+   "saved": 17549,
+   "missing": 621,
+   "bytes": 5044008960,
+   "seconds": 849.1867141723633
+  },
+  "202510": {
+   "records": 8124,
+   "jobs": 16238,
+   "saved": 15673,
+   "missing": 565,
+   "bytes": 4357427200,
+   "seconds": 942.4186999797821
+  },
+  "202511": {
+   "records": 6784,
+   "jobs": 13568,
+   "saved": 13015,
+   "missing": 553,
+   "bytes": 3840143360,
+   "seconds": 1258.2605612277985
+  },
+  "202512": {
+   "records": 6048,
+   "jobs": 12096,
+   "saved": 11493,
+   "missing": 603,
+   "bytes": 3344486400,
+   "seconds": 525.0862319469452
+  },
+  "202601": {
+   "records": 5543,
+   "jobs": 11083,
+   "saved": 10564,
+   "missing": 519,
+   "bytes": 3268894720,
+   "seconds": 547.1504650115967
+  },
+  "202602": {
+   "records": 4859,
+   "jobs": 9718,
+   "saved": 9316,
+   "missing": 402,
+   "bytes": 2820188160,
+   "seconds": 591.0560615062714
+  },
+  "202603": {
+   "records": 6500,
+   "jobs": 12999,
+   "saved": 12434,
+   "missing": 565,
+   "bytes": 3888783360,
+   "seconds": 663.3041799068451
+  },
+  "202604": {
+   "records": 7303,
+   "jobs": 14604,
+   "saved": 14112,
+   "missing": 492,
+   "bytes": 4240343040,
+   "seconds": 672.8584258556366
+  },
+  "202605": {
+   "records": 8760,
+   "jobs": 17520,
+   "saved": 16970,
+   "missing": 550,
+   "bytes": 4828180480,
+   "seconds": 830.3909986019135
+  },
+  "202606": {
+   "records": 9035,
+   "jobs": 18067,
+   "saved": 17464,
+   "missing": 603,
+   "bytes": 4954398720,
+   "seconds": 743.2667248249054
+  },
+  "202607": {
+   "records": 8332,
+   "jobs": 16664,
+   "saved": 16090,
+   "missing": 574,
+   "bytes": 4647147520,
+   "seconds": 641.3039417266846
+  },
+  "202608": {
+   "records": 6925,
+   "jobs": 13847,
+   "saved": 13461,
+   "missing": 386,
+   "bytes": 3875594240,
+   "seconds": 610.746321439743
+  }
+ },
+ "missing_reasons": {
+  "HTTP Error 404": 13891,
+  "unknown-format": 1,
+  "<urlopen error timed out>": 102,
+  "[Errno 104] Connection reset by peer": 14
+ },
+ "bytes_total": 138454773760,
+ "saved_total": 452471,
+ "missing_total": 14002,
+ "seconds_total": 23395.042637348175
+}

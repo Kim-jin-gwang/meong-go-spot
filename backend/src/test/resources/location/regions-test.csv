@@ -1,0 +1,4 @@
+version,regionCode,emdCode,publicLocation,active
+test-v1,11680,,테스트 시군구,true
+test-v1,11680,1168010100,테스트 시군구 테스트동,true
+test-v1,11680,1168010200,테스트 폐지동,false

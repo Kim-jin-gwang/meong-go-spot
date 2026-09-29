@@ -1,0 +1,32 @@
+[Unit]
+Description=보호소 결과 통계(HDFS 백필 -> dashboard_stat) 배치
+# 원천은 서버 2 HDFS 의 월별 백필(WebHDFS), 대상은 compose 의 postgres 컨테이너(루프백) dashboard_stat(V4).
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=ubuntu
+Group=ubuntu
+
+# DSN 은 보호동물 적재기와 같은 파일·같은 역할(shelter_loader — V4 가 dashboard_stat 권한을 준다).
+EnvironmentFile=/home/ubuntu/.secrets/loader/shelter-loader.env
+EnvironmentFile=/home/ubuntu/shelter-loader/loader.env
+Environment=PYTHONIOENCODING=utf-8
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+
+ExecStart=/usr/local/sbin/run-shelter-outcomes.sh
+# 37개월 × 약 7MB JSONL 을 WebHDFS 로 훑는다 — 2026-09-15 실측 기준 수 분.
+TimeoutStartSec=1800
+
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=read-only
+ProtectControlGroups=yes
+ProtectKernelTunables=yes
+RestrictSUIDSGID=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,16 @@
+# 클러스터 감시 1회 실행 — cluster-watch.timer 가 5분마다 띄운다 (서버 2). 설치: docs/bigdata-cluster.md "알림·상태 점검"
+# Airflow 밖에서 도는 이유: SequentialExecutor 는 22:30 파이프라인 중 다른 태스크를 못 돌리고, Airflow 가 죽으면 Airflow 경보도 죽는다.
+[Unit]
+Description=Cluster watch (HDFS/YARN/disk/services thresholds -> Mattermost on change)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=ubuntu
+# MATTERMOST_WEBHOOK_URL 은 Airflow 와 같은 파일에서 읽는다 (600, ubuntu 소유) — 값이 레포·유닛에 남지 않는다
+EnvironmentFile=/home/ubuntu/airflow/airflow-local.env
+Environment=PYTHONUNBUFFERED=1
+# 표준 라이브러리만 쓰므로 시스템 python3 (Airflow venv 불필요 — venv 가 깨져도 감시는 산다)
+ExecStart=/usr/bin/python3 /home/ubuntu/airflow/dags/cluster_check.py --watch --state /home/ubuntu/airflow/cluster-watch-state.json
+TimeoutStartSec=4min

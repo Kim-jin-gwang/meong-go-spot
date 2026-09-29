@@ -1,0 +1,82 @@
+# Environment variables and local secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor and IDE files
+.idea/
+**/.vscode/*
+!**/.vscode/extensions.json
+!**/.vscode/settings.json
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+build/
+coverage/
+
+# Vue / Vite / tooling caches
+dist-ssr/
+*.local
+*.tsbuildinfo
+.eslintcache
+__screenshots__/
+*.timestamp-*-*.mjs
+
+# Java / JVM / Android
+local.properties
+google-services.json
+**/google-services.json
+# 릴리스 서명 정보. keystore.properties.example 을 복사해 각자 채운다.
+keystore.properties
+*.jks
+*.keystore
+.gradle/
+/backend/bin/
+target/
+out/
+*.class
+*.jar
+*.war
+!**/gradle/wrapper/gradle-wrapper.jar
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Local database and generated data
+*.sqlite
+*.sqlite3
+*.db
+data/local/
+
+# Evaluation dataset binaries stay on server 2 / HDFS — only manifests are committed
+data/eval/datasets/*/images/
+data/eval/datasets/*/extract-list.tsv
+data/eval/datasets/*/vectors*.tsv
+
+# Certificates and private keys
+.secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python
+__pycache__/
+*.pyc

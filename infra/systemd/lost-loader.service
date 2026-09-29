@@ -1,0 +1,31 @@
+[Unit]
+Description=공공 분실동물 스냅샷(HDFS) -> PostgreSQL 적재
+# 원천은 서버 2 HDFS 의 그날 스냅샷(22:30 뒤), 대상은 compose 의 postgres 컨테이너(루프백).
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=ubuntu
+Group=ubuntu
+
+# DSN·지역 기준 데이터 설정은 보호동물 적재기와 같은 파일을 쓴다 (같은 역할 shelter_loader).
+EnvironmentFile=/home/ubuntu/.secrets/loader/shelter-loader.env
+EnvironmentFile=/home/ubuntu/shelter-loader/loader.env
+Environment=PYTHONIOENCODING=utf-8
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+
+ExecStart=/usr/local/sbin/run-lost-loader.sh
+TimeoutStartSec=600
+
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=read-only
+ProtectControlGroups=yes
+ProtectKernelTunables=yes
+RestrictSUIDSGID=yes
+
+[Install]
+WantedBy=multi-user.target

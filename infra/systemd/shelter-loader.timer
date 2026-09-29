@@ -1,0 +1,14 @@
+[Unit]
+Description=공공 보호동물 적재를 매일 23:10 KST 에 실행
+
+[Timer]
+# 수집 DAG(collector_daily)가 22:30 KST 에 Kafka 로 publish 한 뒤에 읽는다.
+# 서버 시간대는 UTC 라 타임존을 명시한다 (systemd 252+ 지원, 서버 1 은 255).
+OnCalendar=*-*-* 23:10:00 Asia/Seoul
+RandomizedDelaySec=300
+# 서버가 꺼져 있어 놓친 실행은 부팅 후 한 번 따라잡는다. 적재는 멱등하므로 안전하다.
+Persistent=true
+Unit=shelter-loader.service
+
+[Install]
+WantedBy=timers.target

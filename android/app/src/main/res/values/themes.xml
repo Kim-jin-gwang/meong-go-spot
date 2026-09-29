@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  앱을 열면 시작 화면이 먼저 뜨고, 저장된 로그인을 되살린 뒤 홈으로 넘어간다
+  (MainActivity 의 installSplashScreen).
+
+  그림 로고는 여기서만 보여 준다. 헤더에는 글씨 로고만 두어 같은 로고가 두 번 나오지 않는다.
+-->
+<resources>
+
+    <!-- 시작 화면이 걷힌 뒤의 앱 테마. 화면 구성은 Compose 의 MeonggoBanjeomTheme 이 맡는다. -->
+    <style name="Theme.Meonggo" parent="@android:style/Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.Meonggo.Splash" parent="Theme.SplashScreen">
+        <!-- 런처 아이콘과 같은 베이지. 아이콘의 사각 경계가 이 색에 묻힌다. -->
+        <item name="windowSplashScreenBackground">@color/ic_launcher_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.Meonggo</item>
+    </style>
+
+</resources>

@@ -1,0 +1,19 @@
+# 훅은 CI의 축소판이고 CI보다 빨라야 한다 — 변경(스테이징)된 파일만 검사한다.
+# 전체 검증은 `npm run check` (CI 게이트와 동일 명령).
+pre-commit:
+  jobs:
+    # ktlint/Spotless는 파일 단위 실행을 지원하지 않아 모듈 전체에 적용된다.
+    # 해당 파일이 스테이징된 커밋에서만 실행되고, 웜 데몬 기준 수 초 내로 끝난다.
+    - name: android-ktlint
+      glob: 'android/**/*.{kt,kts}'
+      run: node scripts/gradlew.mjs android ktlintFormat
+      stage_fixed: true
+    - name: backend-spotless
+      glob: 'backend/**/*.java'
+      run: node scripts/gradlew.mjs backend spotlessApply
+      stage_fixed: true
+
+commit-msg:
+  jobs:
+    - name: commitlint
+      run: npx commitlint --edit {1}

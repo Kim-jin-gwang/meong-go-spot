@@ -1,0 +1,1752 @@
+{
+ "tars": {
+  "images-202401-0000.tar": {
+   "images": 1997,
+   "embedded": 1997,
+   "fallback": 202,
+   "errors": 0,
+   "seconds": 97.60101103782654
+  },
+  "images-202401-0001.tar": {
+   "images": 1987,
+   "embedded": 1987,
+   "fallback": 185,
+   "errors": 0,
+   "seconds": 87.16682124137878
+  },
+  "images-202401-0002.tar": {
+   "images": 1989,
+   "embedded": 1989,
+   "fallback": 153,
+   "errors": 0,
+   "seconds": 100.01921677589417
+  },
+  "images-202401-0003.tar": {
+   "images": 1994,
+   "embedded": 1994,
+   "fallback": 202,
+   "errors": 0,
+   "seconds": 98.37713360786438
+  },
+  "images-202401-0004.tar": {
+   "images": 309,
+   "embedded": 309,
+   "fallback": 38,
+   "errors": 0,
+   "seconds": 10.065500020980835
+  },
+  "images-202402-0000.tar": {
+   "images": 1998,
+   "embedded": 1998,
+   "fallback": 223,
+   "errors": 0,
+   "seconds": 93.84909510612488
+  },
+  "images-202402-0001.tar": {
+   "images": 1986,
+   "embedded": 1986,
+   "fallback": 173,
+   "errors": 0,
+   "seconds": 90.388845205307
+  },
+  "images-202402-0002.tar": {
+   "images": 1999,
+   "embedded": 1999,
+   "fallback": 219,
+   "errors": 0,
+   "seconds": 98.01407098770142
+  },
+  "images-202402-0003.tar": {
+   "images": 1551,
+   "embedded": 1551,
+   "fallback": 197,
+   "errors": 0,
+   "seconds": 68.70798444747925
+  },
+  "images-202403-0000.tar": {
+   "images": 1999,
+   "embedded": 1999,
+   "fallback": 245,
+   "errors": 0,
+   "seconds": 102.69026613235474
+  },
+  "images-202403-0001.tar": {
+   "images": 1980,
+   "embedded": 1980,
+   "fallback": 222,
+   "errors": 0,
+   "seconds": 96.19740509986877
+  },
+  "images-202403-0002.tar": {
+   "images": 1995,
+   "embedded": 1995,
+   "fallback": 200,
+   "errors": 0,
+   "seconds": 131.4308843612671
+  },
+  "images-202403-0003.tar": {
+   "images": 1978,
+   "embedded": 1978,
+   "fallback": 252,
+   "errors": 0,
+   "seconds": 133.71888256072998
+  },
+  "images-202403-0004.tar": {
+   "images": 291,
+   "embedded": 291,
+   "fallback": 21,
+   "errors": 0,
+   "seconds": 12.330137252807617
+  },
+  "images-202404-0000.tar": {
+   "images": 1998,
+   "embedded": 1998,
+   "fallback": 323,
+   "errors": 0,
+   "seconds": 117.07139277458191
+  },
+  "images-202404-0001.tar": {
+   "images": 1987,
+   "embedded": 1987,
+   "fallback": 218,
+   "errors": 0,
+   "seconds": 117.60539436340332
+  },
+  "images-202404-0002.tar": {
+   "images": 1986,
+   "embedded": 1986,
+   "fallback": 226,
+   "errors": 0,
+   "seconds": 112.95346069335938
+  },
+  "images-202404-0003.tar": {
+   "images": 1988,
+   "embedded": 1988,
+   "fallback": 213,
+   "errors": 0,
+   "seconds": 126.85251450538635
+  },
+  "images-202404-0004.tar": {
+   "images": 1583,
+   "embedded": 1583,
+   "fallback": 194,
+   "errors": 0,
+   "seconds": 84.02617263793945
+  },
+  "images-202405-0000.tar": {
+   "images": 2000,
+   "embedded": 2000,
+   "fallback": 250,
+   "errors": 0,
+   "seconds": 100.76497197151184
+  },
+  "images-202405-0001.tar": {
+   "images": 1996,
+   "embedded": 1996,
+   "fallback": 241,
+   "errors": 0,
+   "seconds": 106.49879145622253
+  },
+  "images-202405-0002.tar": {
+   "images": 1982,
+   "embedded": 1982,
+   "fallback": 225,
+   "errors": 0,
+   "seconds": 79.60441827774048
+  },
+  "images-202405-0003.tar": {
+   "images": 1990,
+   "embedded": 1990,
+   "fallback": 191,
+   "errors": 0,
+   "seconds": 89.01729607582092
+  },
+  "images-202405-0004.tar": {
+   "images": 1976,
+   "embedded": 1976,
+   "fallback": 170,
+   "errors": 0,
+   "seconds": 107.70128393173218
+  },
+  "images-202405-0005.tar": {
+   "images": 1445,
+   "embedded": 1445,
+   "fallback": 187,
+   "errors": 0,
+   "seconds": 60.35765552520752
+  },
+  "images-202406-0000.tar": {
+   "images": 2000,
+   "embedded": 2000,
+   "fallback": 248,
+   "errors": 0,
+   "seconds": 82.54125952720642
+  },
+  "images-202406-0001.tar": {
+   "images": 1997,
+   "embedded": 1997,
+   "fallback": 245,
+   "errors": 0,
+   "seconds": 109.44211173057556
+  },
+  "images-202406-0002.tar": {
+   "images": 1988,
+   "embedded": 1988,
+   "fallback": 181,
+   "errors": 0,
+   "seconds": 86.51615262031555
+  },
+  "images-202406-0003.tar": {
+   "images": 1973,
+   "embedded": 1973,
+   "fallback": 185,
+   "errors": 0,
+   "seconds": 91.25297355651855
+  },
+  "images-202406-0004.tar": {
+   "images": 1998,
+   "embedded": 1998,
+   "fallback": 172,
+   "errors": 0,
+   "seconds": 106.94151449203491
+  },
+  "images-202406-0005.tar": {
+   "images": 1956,
+   "embedded": 1956,
+   "fallback": 209,
+   "errors": 0,
+   "seconds": 89.99572157859802
+  },
+  "images-202406-0006.tar": {
+   "images": 243,
+   "embedded": 243,
+   "fallback": 28,
+   "errors": 0,
+   "seconds": 7.755831003189087
+  },
+  "images-202407-0000.tar": {
+   "images": 2000,
+   "embedded": 2000,
+   "fallback": 246,
+   "errors": 0,
+   "seconds": 72.64439964294434
+  },
+  "images-202407-0001.tar": {
+   "images": 2000,
+   "embedded": 2000,
+   "fallback": 353,
+   "errors": 0,
+   "seconds": 107.42655658721924
+  },
+  "images-202407-0002.tar": {
+   "images": 1997,
+   "embedded": 1997,
+   "fallback": 256,
+   "errors": 0,
+   "seconds": 102.36053800582886
+  },
+  "images-202407-0003.tar": {
+   "images": 1995,
+   "embedded": 1995,
+   "fallback": 299,
+   "errors": 0,
+   "seconds": 97.03607654571533
+  },
+  "images-202407-0004.tar": {
+   "images": 1998,
+   "embedded": 1998,
+   "fallback": 241,
+   "errors": 0,
+   "seconds": 71.4718987941742
+  },
+  "images-202407-0005.tar": {
+   "images": 1992,
+   "embedded": 1992,
+   "fallback": 242,
+   "errors": 0,
+   "seconds": 87.07321619987488
+  },
+  "images-202407-0006.tar": {
+   "images": 1933,
+   "embedded": 1933,
+   "fallback": 167,
+   "errors": 0,
+   "seconds": 87.7698540687561
+  },
+  "images-202407-0007.tar": {
+   "images": 1992,
+   "embedded": 1992,
+   "fallback": 206,
+   "errors": 0,
+   "seconds": 114.54122972488403
+  },
+  "images-202407-0008.tar": {
+   "images": 1989,
+   "embedded": 1989,
+   "fallback": 358,
+   "errors": 0,
+   "seconds": 95.00212526321411
+  },
+  "images-202407-0009.tar": {
+   "images": 1954,
+   "embedded": 1954,
+   "fallback": 208,
+   "errors": 0,
+   "seconds": 88.70242547988892
+  },
+  "images-202407-0010.tar": {
+   "images": 1179,
+   "embedded": 1179,
+   "fallback": 128,
+   "errors": 0,
+   "seconds": 48.52160429954529
+  },
+  "images-202408-0000.tar": {
+   "images": 1997,
+   "embedded": 1997,
+   "fallback": 281,
+   "errors": 0,
+   "seconds": 74.16201329231262
+  },
+  "images-202408-0001.tar": {
+   "images": 1993,
+   "embedded": 1993,
+   "fallback": 319,
+   "errors": 0,
+   "seconds": 114.8803699016571
+  },
+  "images-202408-0002.tar": {
+   "images": 1998,
+   "embedded": 1998,
+   "fallback": 260,
+   "errors": 0,
+   "seconds": 96.44481182098389
+  },
+  "images-202408-0003.tar": {
+   "images": 1984,
+   "embedded": 1984,
+   "fallback": 204,
+   "errors": 0,
+   "seconds": 81.26966547966003
+  },
+  "images-202408-0004.tar": {
+   "images": 1981,
+   "embedded": 1981,
+   "fallback": 279,
+   "errors": 0,
+   "seconds": 84.79577350616455
+  },
+  "images-202408-0005.tar": {
+   "images": 1961,
+   "embedded": 1961,
+   "fallback": 200,
+   "errors": 0,
+   "seconds": 100.78559589385986
+  },
+  "images-202408-0006.tar": {
+   "images": 2000,
+   "embedded": 2000,
+   "fallback": 190,
+   "errors": 0,
+   "seconds": 102.54104423522949
+  },
+  "images-202408-0007.tar": {
+   "images": 1958,
+   "embedded": 1958,
+   "fallback": 264,
+   "errors": 0,
+   "seconds": 91.45463824272156
+  },
+  "images-202408-0008.tar": {
+   "images": 1509,
+   "embedded": 1509,
+   "fallback": 144,
+   "errors": 0,
+   "seconds": 67.82771110534668
+  },
+  "images-202409-0000.tar": {
+   "images": 1999,
+   "embedded": 1999,
+   "fallback": 310,
+   "errors": 0,
+   "seconds": 75.06230640411377
+  },
+  "images-202409-0001.tar": {
+   "images": 1997,
+   "embedded": 1997,
+   "fallback": 273,
+   "errors": 0,
+   "seconds": 104.743985414505
+  },
+  "images-202409-0002.tar": {
+   "images": 1994,
+   "embedded": 1994,
+   "fallback": 246,
+   "errors": 0,
+   "seconds": 103.4673171043396
+  },
+  "images-202409-0003.tar": {
+   "images": 1988,
+   "embedded": 1988,
+   "fallback": 252,
+   "errors": 0,
+   "seconds": 77.68802404403687
+  },
+  "images-202409-0004.tar": {
+   "images": 1952,
+   "embedded": 1952,
+   "fallback": 192,
+   "errors": 0,
+   "seconds": 87.90328526496887
+  },
+  "images-202409-0005.tar": {
+   "images": 1998,
+   "embedded": 1998,
+   "fallback": 205,
+   "errors": 0,
+   "seconds": 98.00995302200317
+  },
+  "images-202409-0006.tar": {
+   "images": 1998,
+   "embedded": 1998,
+   "fallback": 320,
+   "errors": 0,
+   "seconds": 115.70433759689331
+  },
+  "images-202409-0007.tar": {
+   "images": 1961,
+   "embedded": 1961,
+   "fallback": 191,
+   "errors": 0,
+   "seconds": 85.2366578578949
+  },
+  "images-202409-0008.tar": {
+   "images": 1040,
+   "embedded": 1040,
+   "fallback": 104,
+   "errors": 0,
+   "seconds": 42.48476576805115
+  },
+  "images-202410-0000.tar": {
+   "images": 1998,
+   "embedded": 1998,
+   "fallback": 336,
+   "errors": 0,
+   "seconds": 67.42401170730591
+  },
+  "images-202410-0001.tar": {
+   "images": 1988,
+   "embedded": 1988,
+   "fallback": 350,
+   "errors": 0,
+   "seconds": 106.59828495979309
+  },
+  "images-202410-0002.tar": {
+   "images": 1975,
+   "embedded": 1975,
+   "fallback": 259,
+   "errors": 0,
+   "seconds": 96.46096181869507
+  },
+  "images-202410-0003.tar": {
+   "images": 1985,
+   "embedded": 1985,
+   "fallback": 242,
+   "errors": 0,
+   "seconds": 89.46553015708923
+  },
+  "images-202410-0004.tar": {
+   "images": 1975,
+   "embedded": 1975,
+   "fallback": 224,
+   "errors": 0,
+   "seconds": 82.20502471923828
+  },
+  "images-202410-0005.tar": {
+   "images": 1917,
+   "embedded": 1917,
+   "fallback": 393,
+   "errors": 0,
+   "seconds": 86.29340362548828
+  },
+  "images-202410-0006.tar": {
+   "images": 1998,
+   "embedded": 1998,
+   "fallback": 275,
+   "errors": 0,
+   "seconds": 111.09578204154968
+  },
+  "images-202410-0007.tar": {
+   "images": 1990,
+   "embedded": 1990,
+   "fallback": 318,
+   "errors": 0,
+   "seconds": 107.43739104270935
+  },
+  "images-202410-0008.tar": {
+   "images": 1924,
+   "embedded": 1924,
+   "fallback": 180,
+   "errors": 0,
+   "seconds": 88.60079574584961
+  },
+  "images-202410-0009.tar": {
+   "images": 1803,
+   "embedded": 1803,
+   "fallback": 203,
+   "errors": 0,
+   "seconds": 80.22533082962036
+  },
+  "images-202411-0000.tar": {
+   "images": 1941,
+   "embedded": 1941,
+   "fallback": 269,
+   "errors": 0,
+   "seconds": 82.69928765296936
+  },
+  "images-202411-0001.tar": {
+   "images": 1906,
+   "embedded": 1906,
+   "fallback": 258,
+   "errors": 0,
+   "seconds": 103.65500211715698
+  },
+  "images-202411-0002.tar": {
+   "images": 1946,
+   "embedded": 1946,
+   "fallback": 194,
+   "errors": 0,
+   "seconds": 86.14111423492432
+  },
+  "images-202411-0003.tar": {
+   "images": 1952,
+   "embedded": 1952,
+   "fallback": 209,
+   "errors": 0,
+   "seconds": 85.83823585510254
+  },
+  "images-202411-0004.tar": {
+   "images": 1817,
+   "embedded": 1817,
+   "fallback": 149,
+   "errors": 0,
+   "seconds": 81.51823258399963
+  },
+  "images-202411-0005.tar": {
+   "images": 1989,
+   "embedded": 1989,
+   "fallback": 303,
+   "errors": 0,
+   "seconds": 98.62435293197632
+  },
+  "images-202411-0006.tar": {
+   "images": 1930,
+   "embedded": 1930,
+   "fallback": 300,
+   "errors": 0,
+   "seconds": 88.27599358558655
+  },
+  "images-202411-0007.tar": {
+   "images": 1654,
+   "embedded": 1654,
+   "fallback": 140,
+   "errors": 0,
+   "seconds": 66.1298017501831
+  },
+  "images-202412-0000.tar": {
+   "images": 1900,
+   "embedded": 1900,
+   "fallback": 190,
+   "errors": 0,
+   "seconds": 78.25909996032715
+  },
+  "images-202412-0001.tar": {
+   "images": 1880,
+   "embedded": 1880,
+   "fallback": 247,
+   "errors": 0,
+   "seconds": 96.56752443313599
+  },
+  "images-202412-0002.tar": {
+   "images": 1907,
+   "embedded": 1907,
+   "fallback": 247,
+   "errors": 0,
+   "seconds": 74.96167206764221
+  },
+  "images-202412-0003.tar": {
+   "images": 1860,
+   "embedded": 1860,
+   "fallback": 174,
+   "errors": 0,
+   "seconds": 84.14907431602478
+  },
+  "images-202412-0004.tar": {
+   "images": 1987,
+   "embedded": 1987,
+   "fallback": 289,
+   "errors": 0,
+   "seconds": 102.7153570652008
+  },
+  "images-202412-0005.tar": {
+   "images": 1925,
+   "embedded": 1925,
+   "fallback": 271,
+   "errors": 0,
+   "seconds": 86.39906406402588
+  },
+  "images-202412-0006.tar": {
+   "images": 1893,
+   "embedded": 1893,
+   "fallback": 147,
+   "errors": 0,
+   "seconds": 75.937429189682
+  },
+  "images-202412-0007.tar": {
+   "images": 49,
+   "embedded": 49,
+   "fallback": 4,
+   "errors": 0,
+   "seconds": 1.6985538005828857
+  },
+  "images-202501-0000.tar": {
+   "images": 1924,
+   "embedded": 1924,
+   "fallback": 254,
+   "errors": 0,
+   "seconds": 82.18968939781189
+  },
+  "images-202501-0001.tar": {
+   "images": 1830,
+   "embedded": 1830,
+   "fallback": 183,
+   "errors": 0,
+   "seconds": 91.27549958229065
+  },
+  "images-202501-0002.tar": {
+   "images": 1911,
+   "embedded": 1911,
+   "fallback": 158,
+   "errors": 0,
+   "seconds": 86.20597457885742
+  },
+  "images-202501-0003.tar": {
+   "images": 1937,
+   "embedded": 1937,
+   "fallback": 199,
+   "errors": 0,
+   "seconds": 87.25277042388916
+  },
+  "images-202501-0004.tar": {
+   "images": 1904,
+   "embedded": 1904,
+   "fallback": 311,
+   "errors": 0,
+   "seconds": 100.93589544296265
+  },
+  "images-202501-0005.tar": {
+   "images": 1895,
+   "embedded": 1895,
+   "fallback": 206,
+   "errors": 0,
+   "seconds": 84.5075249671936
+  },
+  "images-202502-0000.tar": {
+   "images": 1918,
+   "embedded": 1918,
+   "fallback": 224,
+   "errors": 0,
+   "seconds": 86.00456380844116
+  },
+  "images-202502-0001.tar": {
+   "images": 1820,
+   "embedded": 1820,
+   "fallback": 192,
+   "errors": 0,
+   "seconds": 86.32179045677185
+  },
+  "images-202502-0002.tar": {
+   "images": 1948,
+   "embedded": 1947,
+   "fallback": 194,
+   "errors": 1,
+   "seconds": 81.42703557014465
+  },
+  "images-202502-0003.tar": {
+   "images": 1894,
+   "embedded": 1894,
+   "fallback": 149,
+   "errors": 0,
+   "seconds": 80.86974263191223
+  },
+  "images-202502-0004.tar": {
+   "images": 1961,
+   "embedded": 1961,
+   "fallback": 354,
+   "errors": 0,
+   "seconds": 110.40011143684387
+  },
+  "images-202502-0005.tar": {
+   "images": 1918,
+   "embedded": 1918,
+   "fallback": 258,
+   "errors": 0,
+   "seconds": 92.13409304618835
+  },
+  "images-202502-0006.tar": {
+   "images": 431,
+   "embedded": 431,
+   "fallback": 19,
+   "errors": 0,
+   "seconds": 11.098044872283936
+  },
+  "images-202503-0000.tar": {
+   "images": 1866,
+   "embedded": 1866,
+   "fallback": 241,
+   "errors": 0,
+   "seconds": 105.62600708007812
+  },
+  "images-202503-0001.tar": {
+   "images": 1894,
+   "embedded": 1894,
+   "fallback": 208,
+   "errors": 0,
+   "seconds": 125.71157336235046
+  },
+  "images-202503-0002.tar": {
+   "images": 1918,
+   "embedded": 1918,
+   "fallback": 204,
+   "errors": 0,
+   "seconds": 109.2073290348053
+  },
+  "images-202503-0003.tar": {
+   "images": 1809,
+   "embedded": 1809,
+   "fallback": 163,
+   "errors": 0,
+   "seconds": 109.28771376609802
+  },
+  "images-202503-0004.tar": {
+   "images": 1972,
+   "embedded": 1972,
+   "fallback": 249,
+   "errors": 0,
+   "seconds": 127.87391257286072
+  },
+  "images-202503-0005.tar": {
+   "images": 1921,
+   "embedded": 1921,
+   "fallback": 333,
+   "errors": 0,
+   "seconds": 127.36353993415833
+  },
+  "images-202503-0006.tar": {
+   "images": 1957,
+   "embedded": 1957,
+   "fallback": 297,
+   "errors": 0,
+   "seconds": 115.44212436676025
+  },
+  "images-202503-0007.tar": {
+   "images": 695,
+   "embedded": 695,
+   "fallback": 50,
+   "errors": 0,
+   "seconds": 33.122400760650635
+  },
+  "images-202504-0000.tar": {
+   "images": 1869,
+   "embedded": 1869,
+   "fallback": 332,
+   "errors": 0,
+   "seconds": 114.81583905220032
+  },
+  "images-202504-0001.tar": {
+   "images": 1925,
+   "embedded": 1925,
+   "fallback": 246,
+   "errors": 0,
+   "seconds": 104.12187600135803
+  },
+  "images-202504-0002.tar": {
+   "images": 1854,
+   "embedded": 1854,
+   "fallback": 264,
+   "errors": 0,
+   "seconds": 95.39486289024353
+  },
+  "images-202504-0003.tar": {
+   "images": 1954,
+   "embedded": 1954,
+   "fallback": 296,
+   "errors": 0,
+   "seconds": 80.28785610198975
+  },
+  "images-202504-0004.tar": {
+   "images": 1847,
+   "embedded": 1847,
+   "fallback": 190,
+   "errors": 0,
+   "seconds": 97.43714570999146
+  },
+  "images-202504-0005.tar": {
+   "images": 1978,
+   "embedded": 1978,
+   "fallback": 260,
+   "errors": 0,
+   "seconds": 132.9814326763153
+  },
+  "images-202504-0006.tar": {
+   "images": 1954,
+   "embedded": 1954,
+   "fallback": 316,
+   "errors": 0,
+   "seconds": 102.14359855651855
+  },
+  "images-202504-0007.tar": {
+   "images": 1944,
+   "embedded": 1944,
+   "fallback": 311,
+   "errors": 0,
+   "seconds": 184.89116382598877
+  },
+  "images-202504-0008.tar": {
+   "images": 981,
+   "embedded": 981,
+   "fallback": 70,
+   "errors": 0,
+   "seconds": 61.00371479988098
+  },
+  "images-202505-0000.tar": {
+   "images": 1977,
+   "embedded": 1977,
+   "fallback": 224,
+   "errors": 0,
+   "seconds": 104.30128169059753
+  },
+  "images-202505-0001.tar": {
+   "images": 1770,
+   "embedded": 1770,
+   "fallback": 262,
+   "errors": 0,
+   "seconds": 133.3354296684265
+  },
+  "images-202505-0002.tar": {
+   "images": 1931,
+   "embedded": 1931,
+   "fallback": 246,
+   "errors": 0,
+   "seconds": 111.65967798233032
+  },
+  "images-202505-0003.tar": {
+   "images": 1910,
+   "embedded": 1910,
+   "fallback": 239,
+   "errors": 0,
+   "seconds": 92.87926578521729
+  },
+  "images-202505-0004.tar": {
+   "images": 1959,
+   "embedded": 1959,
+   "fallback": 212,
+   "errors": 0,
+   "seconds": 82.53458023071289
+  },
+  "images-202505-0005.tar": {
+   "images": 1835,
+   "embedded": 1835,
+   "fallback": 230,
+   "errors": 0,
+   "seconds": 94.21244430541992
+  },
+  "images-202505-0006.tar": {
+   "images": 1974,
+   "embedded": 1974,
+   "fallback": 215,
+   "errors": 0,
+   "seconds": 101.64465737342834
+  },
+  "images-202505-0007.tar": {
+   "images": 1925,
+   "embedded": 1925,
+   "fallback": 330,
+   "errors": 0,
+   "seconds": 129.82342100143433
+  },
+  "images-202505-0008.tar": {
+   "images": 1957,
+   "embedded": 1957,
+   "fallback": 311,
+   "errors": 0,
+   "seconds": 215.33716893196106
+  },
+  "images-202505-0009.tar": {
+   "images": 1309,
+   "embedded": 1309,
+   "fallback": 111,
+   "errors": 0,
+   "seconds": 93.03110384941101
+  },
+  "images-202506-0000.tar": {
+   "images": 1981,
+   "embedded": 1981,
+   "fallback": 321,
+   "errors": 0,
+   "seconds": 142.09695863723755
+  },
+  "images-202506-0001.tar": {
+   "images": 1790,
+   "embedded": 1790,
+   "fallback": 273,
+   "errors": 0,
+   "seconds": 155.09698271751404
+  },
+  "images-202506-0002.tar": {
+   "images": 1898,
+   "embedded": 1898,
+   "fallback": 239,
+   "errors": 0,
+   "seconds": 151.44929456710815
+  },
+  "images-202506-0003.tar": {
+   "images": 1930,
+   "embedded": 1930,
+   "fallback": 257,
+   "errors": 0,
+   "seconds": 145.21228313446045
+  },
+  "images-202506-0004.tar": {
+   "images": 1950,
+   "embedded": 1950,
+   "fallback": 229,
+   "errors": 0,
+   "seconds": 84.88208413124084
+  },
+  "images-202506-0005.tar": {
+   "images": 1897,
+   "embedded": 1897,
+   "fallback": 221,
+   "errors": 0,
+   "seconds": 133.48781967163086
+  },
+  "images-202506-0006.tar": {
+   "images": 1981,
+   "embedded": 1981,
+   "fallback": 172,
+   "errors": 0,
+   "seconds": 125.19708180427551
+  },
+  "images-202506-0007.tar": {
+   "images": 1934,
+   "embedded": 1934,
+   "fallback": 404,
+   "errors": 0,
+   "seconds": 187.5702633857727
+  },
+  "images-202506-0008.tar": {
+   "images": 1933,
+   "embedded": 1933,
+   "fallback": 261,
+   "errors": 0,
+   "seconds": 291.9703166484833
+  },
+  "images-202506-0009.tar": {
+   "images": 1023,
+   "embedded": 1023,
+   "fallback": 93,
+   "errors": 0,
+   "seconds": 66.76372504234314
+  },
+  "images-202507-0000.tar": {
+   "images": 1970,
+   "embedded": 1970,
+   "fallback": 298,
+   "errors": 0,
+   "seconds": 103.06912064552307
+  },
+  "images-202507-0001.tar": {
+   "images": 1805,
+   "embedded": 1805,
+   "fallback": 196,
+   "errors": 0,
+   "seconds": 119.45804858207703
+  },
+  "images-202507-0002.tar": {
+   "images": 1933,
+   "embedded": 1933,
+   "fallback": 259,
+   "errors": 0,
+   "seconds": 120.34245228767395
+  },
+  "images-202507-0003.tar": {
+   "images": 1908,
+   "embedded": 1908,
+   "fallback": 217,
+   "errors": 0,
+   "seconds": 88.16499042510986
+  },
+  "images-202507-0004.tar": {
+   "images": 1933,
+   "embedded": 1933,
+   "fallback": 227,
+   "errors": 0,
+   "seconds": 101.90569996833801
+  },
+  "images-202507-0005.tar": {
+   "images": 1889,
+   "embedded": 1889,
+   "fallback": 174,
+   "errors": 0,
+   "seconds": 124.30852365493774
+  },
+  "images-202507-0006.tar": {
+   "images": 1959,
+   "embedded": 1959,
+   "fallback": 308,
+   "errors": 0,
+   "seconds": 115.78360438346863
+  },
+  "images-202507-0007.tar": {
+   "images": 1925,
+   "embedded": 1925,
+   "fallback": 269,
+   "errors": 0,
+   "seconds": 124.92650866508484
+  },
+  "images-202507-0008.tar": {
+   "images": 1751,
+   "embedded": 1751,
+   "fallback": 177,
+   "errors": 0,
+   "seconds": 109.60054755210876
+  },
+  "images-202508-0000.tar": {
+   "images": 1881,
+   "embedded": 1881,
+   "fallback": 248,
+   "errors": 0,
+   "seconds": 93.5692617893219
+  },
+  "images-202508-0001.tar": {
+   "images": 1891,
+   "embedded": 1891,
+   "fallback": 222,
+   "errors": 0,
+   "seconds": 89.1606855392456
+  },
+  "images-202508-0002.tar": {
+   "images": 1896,
+   "embedded": 1896,
+   "fallback": 200,
+   "errors": 0,
+   "seconds": 95.00135493278503
+  },
+  "images-202508-0003.tar": {
+   "images": 1924,
+   "embedded": 1924,
+   "fallback": 224,
+   "errors": 0,
+   "seconds": 75.67362976074219
+  },
+  "images-202508-0004.tar": {
+   "images": 1871,
+   "embedded": 1871,
+   "fallback": 165,
+   "errors": 0,
+   "seconds": 93.08410453796387
+  },
+  "images-202508-0005.tar": {
+   "images": 1960,
+   "embedded": 1960,
+   "fallback": 211,
+   "errors": 0,
+   "seconds": 111.81324100494385
+  },
+  "images-202508-0006.tar": {
+   "images": 1946,
+   "embedded": 1946,
+   "fallback": 275,
+   "errors": 0,
+   "seconds": 111.86429524421692
+  },
+  "images-202508-0007.tar": {
+   "images": 1710,
+   "embedded": 1710,
+   "fallback": 142,
+   "errors": 0,
+   "seconds": 93.76160788536072
+  },
+  "images-202509-0000.tar": {
+   "images": 1952,
+   "embedded": 1952,
+   "fallback": 244,
+   "errors": 0,
+   "seconds": 86.74985885620117
+  },
+  "images-202509-0001.tar": {
+   "images": 1831,
+   "embedded": 1831,
+   "fallback": 208,
+   "errors": 0,
+   "seconds": 84.06937837600708
+  },
+  "images-202509-0002.tar": {
+   "images": 1933,
+   "embedded": 1933,
+   "fallback": 267,
+   "errors": 0,
+   "seconds": 98.96719479560852
+  },
+  "images-202509-0003.tar": {
+   "images": 1933,
+   "embedded": 1933,
+   "fallback": 215,
+   "errors": 0,
+   "seconds": 84.4363956451416
+  },
+  "images-202509-0004.tar": {
+   "images": 1913,
+   "embedded": 1913,
+   "fallback": 207,
+   "errors": 0,
+   "seconds": 96.23204445838928
+  },
+  "images-202509-0005.tar": {
+   "images": 1928,
+   "embedded": 1928,
+   "fallback": 131,
+   "errors": 0,
+   "seconds": 116.81485748291016
+  },
+  "images-202509-0006.tar": {
+   "images": 1980,
+   "embedded": 1980,
+   "fallback": 247,
+   "errors": 0,
+   "seconds": 115.71951580047607
+  },
+  "images-202509-0007.tar": {
+   "images": 1939,
+   "embedded": 1939,
+   "fallback": 274,
+   "errors": 0,
+   "seconds": 99.25108242034912
+  },
+  "images-202509-0008.tar": {
+   "images": 1978,
+   "embedded": 1978,
+   "fallback": 173,
+   "errors": 0,
+   "seconds": 105.3640513420105
+  },
+  "images-202509-0009.tar": {
+   "images": 162,
+   "embedded": 162,
+   "fallback": 14,
+   "errors": 0,
+   "seconds": 4.810879707336426
+  },
+  "images-202510-0000.tar": {
+   "images": 1919,
+   "embedded": 1919,
+   "fallback": 225,
+   "errors": 0,
+   "seconds": 88.35943055152893
+  },
+  "images-202510-0001.tar": {
+   "images": 1914,
+   "embedded": 1914,
+   "fallback": 207,
+   "errors": 0,
+   "seconds": 87.62614417076111
+  },
+  "images-202510-0002.tar": {
+   "images": 1916,
+   "embedded": 1916,
+   "fallback": 268,
+   "errors": 0,
+   "seconds": 91.26009011268616
+  },
+  "images-202510-0003.tar": {
+   "images": 1938,
+   "embedded": 1938,
+   "fallback": 200,
+   "errors": 0,
+   "seconds": 76.35826921463013
+  },
+  "images-202510-0004.tar": {
+   "images": 1865,
+   "embedded": 1865,
+   "fallback": 148,
+   "errors": 0,
+   "seconds": 105.43564891815186
+  },
+  "images-202510-0005.tar": {
+   "images": 1984,
+   "embedded": 1984,
+   "fallback": 162,
+   "errors": 0,
+   "seconds": 119.00621056556702
+  },
+  "images-202510-0006.tar": {
+   "images": 1916,
+   "embedded": 1916,
+   "fallback": 296,
+   "errors": 0,
+   "seconds": 98.76314496994019
+  },
+  "images-202510-0007.tar": {
+   "images": 1983,
+   "embedded": 1983,
+   "fallback": 170,
+   "errors": 0,
+   "seconds": 103.76106977462769
+  },
+  "images-202510-0008.tar": {
+   "images": 238,
+   "embedded": 238,
+   "fallback": 9,
+   "errors": 0,
+   "seconds": 7.326014995574951
+  },
+  "images-202511-0000.tar": {
+   "images": 1886,
+   "embedded": 1886,
+   "fallback": 228,
+   "errors": 0,
+   "seconds": 88.89102172851562
+  },
+  "images-202511-0001.tar": {
+   "images": 1894,
+   "embedded": 1894,
+   "fallback": 237,
+   "errors": 0,
+   "seconds": 104.00988435745239
+  },
+  "images-202511-0002.tar": {
+   "images": 1932,
+   "embedded": 1932,
+   "fallback": 178,
+   "errors": 0,
+   "seconds": 71.42016887664795
+  },
+  "images-202511-0003.tar": {
+   "images": 1880,
+   "embedded": 1880,
+   "fallback": 109,
+   "errors": 0,
+   "seconds": 106.34267497062683
+  },
+  "images-202511-0004.tar": {
+   "images": 1962,
+   "embedded": 1962,
+   "fallback": 244,
+   "errors": 0,
+   "seconds": 121.70225071907043
+  },
+  "images-202511-0005.tar": {
+   "images": 1921,
+   "embedded": 1921,
+   "fallback": 265,
+   "errors": 0,
+   "seconds": 105.26187300682068
+  },
+  "images-202511-0006.tar": {
+   "images": 1540,
+   "embedded": 1540,
+   "fallback": 165,
+   "errors": 0,
+   "seconds": 84.75691032409668
+  },
+  "images-202512-0000.tar": {
+   "images": 1831,
+   "embedded": 1831,
+   "fallback": 205,
+   "errors": 0,
+   "seconds": 95.01765513420105
+  },
+  "images-202512-0001.tar": {
+   "images": 1922,
+   "embedded": 1922,
+   "fallback": 225,
+   "errors": 0,
+   "seconds": 84.8710949420929
+  },
+  "images-202512-0002.tar": {
+   "images": 1849,
+   "embedded": 1849,
+   "fallback": 173,
+   "errors": 0,
+   "seconds": 84.3707926273346
+  },
+  "images-202512-0003.tar": {
+   "images": 1942,
+   "embedded": 1942,
+   "fallback": 177,
+   "errors": 0,
+   "seconds": 116.05605387687683
+  },
+  "images-202512-0004.tar": {
+   "images": 1918,
+   "embedded": 1918,
+   "fallback": 323,
+   "errors": 0,
+   "seconds": 100.66770482063293
+  },
+  "images-202512-0005.tar": {
+   "images": 1935,
+   "embedded": 1935,
+   "fallback": 152,
+   "errors": 0,
+   "seconds": 104.57708239555359
+  },
+  "images-202512-0006.tar": {
+   "images": 96,
+   "embedded": 96,
+   "fallback": 20,
+   "errors": 0,
+   "seconds": 3.8267199993133545
+  },
+  "images-202601-0000.tar": {
+   "images": 1854,
+   "embedded": 1854,
+   "fallback": 199,
+   "errors": 0,
+   "seconds": 86.90677785873413
+  },
+  "images-202601-0001.tar": {
+   "images": 1918,
+   "embedded": 1918,
+   "fallback": 229,
+   "errors": 0,
+   "seconds": 100.95483922958374
+  },
+  "images-202601-0002.tar": {
+   "images": 1859,
+   "embedded": 1859,
+   "fallback": 168,
+   "errors": 0,
+   "seconds": 93.73798704147339
+  },
+  "images-202601-0003.tar": {
+   "images": 1986,
+   "embedded": 1986,
+   "fallback": 202,
+   "errors": 0,
+   "seconds": 115.99136090278625
+  },
+  "images-202601-0004.tar": {
+   "images": 1893,
+   "embedded": 1893,
+   "fallback": 244,
+   "errors": 0,
+   "seconds": 107.55252003669739
+  },
+  "images-202601-0005.tar": {
+   "images": 1054,
+   "embedded": 1054,
+   "fallback": 104,
+   "errors": 0,
+   "seconds": 54.24837779998779
+  },
+  "images-202602-0000.tar": {
+   "images": 1897,
+   "embedded": 1897,
+   "fallback": 225,
+   "errors": 0,
+   "seconds": 95.81425619125366
+  },
+  "images-202602-0001.tar": {
+   "images": 1926,
+   "embedded": 1926,
+   "fallback": 233,
+   "errors": 0,
+   "seconds": 80.78425741195679
+  },
+  "images-202602-0002.tar": {
+   "images": 1910,
+   "embedded": 1910,
+   "fallback": 147,
+   "errors": 0,
+   "seconds": 105.13172316551208
+  },
+  "images-202602-0003.tar": {
+   "images": 1927,
+   "embedded": 1927,
+   "fallback": 323,
+   "errors": 0,
+   "seconds": 111.51983761787415
+  },
+  "images-202602-0004.tar": {
+   "images": 1656,
+   "embedded": 1656,
+   "fallback": 177,
+   "errors": 0,
+   "seconds": 83.96634149551392
+  },
+  "images-202603-0000.tar": {
+   "images": 1893,
+   "embedded": 1893,
+   "fallback": 284,
+   "errors": 0,
+   "seconds": 91.13638591766357
+  },
+  "images-202603-0001.tar": {
+   "images": 1877,
+   "embedded": 1877,
+   "fallback": 311,
+   "errors": 0,
+   "seconds": 93.06652402877808
+  },
+  "images-202603-0002.tar": {
+   "images": 1855,
+   "embedded": 1855,
+   "fallback": 205,
+   "errors": 0,
+   "seconds": 94.13511514663696
+  },
+  "images-202603-0003.tar": {
+   "images": 1951,
+   "embedded": 1951,
+   "fallback": 217,
+   "errors": 0,
+   "seconds": 110.90952253341675
+  },
+  "images-202603-0004.tar": {
+   "images": 1940,
+   "embedded": 1940,
+   "fallback": 337,
+   "errors": 0,
+   "seconds": 124.2638852596283
+  },
+  "images-202603-0005.tar": {
+   "images": 1938,
+   "embedded": 1938,
+   "fallback": 311,
+   "errors": 0,
+   "seconds": 115.43280792236328
+  },
+  "images-202603-0006.tar": {
+   "images": 980,
+   "embedded": 980,
+   "fallback": 82,
+   "errors": 0,
+   "seconds": 44.447508096694946
+  },
+  "images-202604-0000.tar": {
+   "images": 1885,
+   "embedded": 1885,
+   "fallback": 351,
+   "errors": 0,
+   "seconds": 99.71266674995422
+  },
+  "images-202604-0001.tar": {
+   "images": 1895,
+   "embedded": 1895,
+   "fallback": 270,
+   "errors": 0,
+   "seconds": 98.94314336776733
+  },
+  "images-202604-0002.tar": {
+   "images": 1922,
+   "embedded": 1922,
+   "fallback": 267,
+   "errors": 0,
+   "seconds": 86.58427166938782
+  },
+  "images-202604-0003.tar": {
+   "images": 1885,
+   "embedded": 1885,
+   "fallback": 221,
+   "errors": 0,
+   "seconds": 90.37649369239807
+  },
+  "images-202604-0004.tar": {
+   "images": 1982,
+   "embedded": 1982,
+   "fallback": 233,
+   "errors": 0,
+   "seconds": 111.1529290676117
+  },
+  "images-202604-0005.tar": {
+   "images": 1975,
+   "embedded": 1975,
+   "fallback": 284,
+   "errors": 0,
+   "seconds": 124.44159817695618
+  },
+  "images-202604-0006.tar": {
+   "images": 1966,
+   "embedded": 1966,
+   "fallback": 277,
+   "errors": 0,
+   "seconds": 112.63228058815002
+  },
+  "images-202604-0007.tar": {
+   "images": 602,
+   "embedded": 602,
+   "fallback": 34,
+   "errors": 0,
+   "seconds": 14.327993869781494
+  },
+  "images-202605-0000.tar": {
+   "images": 1985,
+   "embedded": 1985,
+   "fallback": 369,
+   "errors": 0,
+   "seconds": 103.5316870212555
+  },
+  "images-202605-0001.tar": {
+   "images": 1755,
+   "embedded": 1755,
+   "fallback": 263,
+   "errors": 0,
+   "seconds": 99.89664101600647
+  },
+  "images-202605-0002.tar": {
+   "images": 1948,
+   "embedded": 1948,
+   "fallback": 250,
+   "errors": 0,
+   "seconds": 112.40032291412354
+  },
+  "images-202605-0003.tar": {
+   "images": 1929,
+   "embedded": 1929,
+   "fallback": 319,
+   "errors": 0,
+   "seconds": 77.46615076065063
+  },
+  "images-202605-0004.tar": {
+   "images": 1955,
+   "embedded": 1955,
+   "fallback": 245,
+   "errors": 0,
+   "seconds": 86.79583430290222
+  },
+  "images-202605-0005.tar": {
+   "images": 1960,
+   "embedded": 1960,
+   "fallback": 166,
+   "errors": 0,
+   "seconds": 109.86905145645142
+  },
+  "images-202605-0006.tar": {
+   "images": 1985,
+   "embedded": 1985,
+   "fallback": 252,
+   "errors": 0,
+   "seconds": 116.55019474029541
+  },
+  "images-202605-0007.tar": {
+   "images": 1948,
+   "embedded": 1948,
+   "fallback": 226,
+   "errors": 0,
+   "seconds": 104.28398585319519
+  },
+  "images-202605-0008.tar": {
+   "images": 1505,
+   "embedded": 1505,
+   "fallback": 177,
+   "errors": 0,
+   "seconds": 69.85967493057251
+  },
+  "images-202606-0000.tar": {
+   "images": 1986,
+   "embedded": 1986,
+   "fallback": 273,
+   "errors": 0,
+   "seconds": 89.04265117645264
+  },
+  "images-202606-0001.tar": {
+   "images": 1743,
+   "embedded": 1743,
+   "fallback": 232,
+   "errors": 0,
+   "seconds": 104.818514585495
+  },
+  "images-202606-0002.tar": {
+   "images": 1924,
+   "embedded": 1924,
+   "fallback": 186,
+   "errors": 0,
+   "seconds": 121.24909329414368
+  },
+  "images-202606-0003.tar": {
+   "images": 1953,
+   "embedded": 1953,
+   "fallback": 232,
+   "errors": 0,
+   "seconds": 92.91977596282959
+  },
+  "images-202606-0004.tar": {
+   "images": 1966,
+   "embedded": 1966,
+   "fallback": 188,
+   "errors": 0,
+   "seconds": 85.08090543746948
+  },
+  "images-202606-0005.tar": {
+   "images": 1912,
+   "embedded": 1912,
+   "fallback": 151,
+   "errors": 0,
+   "seconds": 106.93762516975403
+  },
+  "images-202606-0006.tar": {
+   "images": 1980,
+   "embedded": 1980,
+   "fallback": 225,
+   "errors": 0,
+   "seconds": 120.41972422599792
+  },
+  "images-202606-0007.tar": {
+   "images": 1946,
+   "embedded": 1946,
+   "fallback": 215,
+   "errors": 0,
+   "seconds": 109.76692461967468
+  },
+  "images-202606-0008.tar": {
+   "images": 1987,
+   "embedded": 1987,
+   "fallback": 220,
+   "errors": 0,
+   "seconds": 95.61845707893372
+  },
+  "images-202606-0009.tar": {
+   "images": 67,
+   "embedded": 67,
+   "fallback": 15,
+   "errors": 0,
+   "seconds": 2.9876039028167725
+  },
+  "images-202607-0000.tar": {
+   "images": 1959,
+   "embedded": 1959,
+   "fallback": 224,
+   "errors": 0,
+   "seconds": 91.39489340782166
+  },
+  "images-202607-0001.tar": {
+   "images": 1961,
+   "embedded": 1961,
+   "fallback": 310,
+   "errors": 0,
+   "seconds": 101.06878089904785
+  },
+  "images-202607-0002.tar": {
+   "images": 1784,
+   "embedded": 1784,
+   "fallback": 237,
+   "errors": 0,
+   "seconds": 110.58296346664429
+  },
+  "images-202607-0003.tar": {
+   "images": 1928,
+   "embedded": 1928,
+   "fallback": 274,
+   "errors": 0,
+   "seconds": 96.70640897750854
+  },
+  "images-202607-0004.tar": {
+   "images": 1982,
+   "embedded": 1982,
+   "fallback": 244,
+   "errors": 0,
+   "seconds": 85.68497967720032
+  },
+  "images-202607-0005.tar": {
+   "images": 1919,
+   "embedded": 1919,
+   "fallback": 191,
+   "errors": 0,
+   "seconds": 116.10615730285645
+  },
+  "images-202607-0006.tar": {
+   "images": 1950,
+   "embedded": 1950,
+   "fallback": 178,
+   "errors": 0,
+   "seconds": 112.46624851226807
+  },
+  "images-202607-0007.tar": {
+   "images": 1965,
+   "embedded": 1965,
+   "fallback": 241,
+   "errors": 0,
+   "seconds": 110.9480447769165
+  },
+  "images-202607-0008.tar": {
+   "images": 642,
+   "embedded": 642,
+   "fallback": 42,
+   "errors": 0,
+   "seconds": 18.52517580986023
+  },
+  "images-202608-0000.tar": {
+   "images": 1973,
+   "embedded": 1973,
+   "fallback": 253,
+   "errors": 0,
+   "seconds": 103.60941696166992
+  },
+  "images-202608-0001.tar": {
+   "images": 1884,
+   "embedded": 1884,
+   "fallback": 229,
+   "errors": 0,
+   "seconds": 102.82812547683716
+  },
+  "images-202608-0002.tar": {
+   "images": 1931,
+   "embedded": 1931,
+   "fallback": 320,
+   "errors": 0,
+   "seconds": 106.58168888092041
+  },
+  "images-202608-0003.tar": {
+   "images": 1974,
+   "embedded": 1974,
+   "fallback": 190,
+   "errors": 0,
+   "seconds": 80.14098978042603
+  },
+  "images-202608-0004.tar": {
+   "images": 1931,
+   "embedded": 1931,
+   "fallback": 156,
+   "errors": 0,
+   "seconds": 113.79083895683289
+  },
+  "images-202608-0005.tar": {
+   "images": 1934,
+   "embedded": 1934,
+   "fallback": 177,
+   "errors": 0,
+   "seconds": 116.99647808074951
+  },
+  "images-202608-0006.tar": {
+   "images": 1834,
+   "embedded": 1834,
+   "fallback": 153,
+   "errors": 0,
+   "seconds": 93.8965859413147
+  },
+  "images-202609-0000.tar": {
+   "images": 1120,
+   "embedded": 1120,
+   "fallback": 101,
+   "errors": 0,
+   "seconds": 63.724031925201416
+  }
+ },
+ "images_total": 452471,
+ "embedded_total": 452470,
+ "fallback_total": 54765,
+ "errors_total": 1,
+ "seconds_total": 23829.954209566116
+}

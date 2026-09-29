@@ -1,0 +1,121 @@
+pair_id	query_id	target_id	band	species	fallback	q_angle	q_background	q_quality	t_angle	t_background	t_quality	no_animal	rank	rank_nofb
+pos-0000	426328202600115_1	426328202600115_2	hard	개	both_detected	top	indoor	good	top	indoor	good	0	14	14
+pos-0001	426337202400236_1	426337202400236_2	mid	개	both_detected	front	indoor	good	front	indoor	good	0	3	3
+pos-0002	428355202500072_1	428355202500072_2	easy	개	both_detected	front	indoor	occluded	front	indoor	occluded	0	1	1
+pos-0003	411312202500320_1	411312202500320_2	hard	개	both_detected	front	outdoor	good	side	outdoor	good	0	28	27
+pos-0004	426335202600009_1	426335202600009_2	mid	개	both_detected	front	indoor	occluded	front	indoor	occluded	0	1	1
+pos-0005	428357202600307_1	428357202600307_2	easy	개	both_detected	front	indoor	occluded	front	indoor	occluded	0	1	1
+pos-0006	428349202501024_1	428349202501024_2	hard	개	both_detected	front	cage	occluded	side	cage	occluded	0	6	4
+pos-0007	426325202400282_1	426325202400282_2	mid	개	both_detected	top	indoor	good	front	indoor	good	0	1	1
+pos-0008	426325202500073_1	426325202500073_2	easy	개	both_detected	front	cage	occluded	side	cage	occluded	0	1	1
+pos-0009	426332202500668_1	426332202500668_2	hard	개	both_detected	front	outdoor	good	top	cage	good	0	195	163
+pos-0010	426327202500133_1	426327202500133_2	mid	개	both_detected	front	indoor	good	front	indoor	blur	0	3	3
+pos-0011	413580202600622_1	413580202600622_2	easy	개	both_detected	front	outdoor	occluded	front	outdoor	occluded	0	1	1
+pos-0012	429362202600036_1	429362202600036_2	hard	개	both_detected	front	plain	good	top	cage	good	0	3	3
+pos-0013	428357202500043_1	428357202500043_2	mid	개	both_detected	side	cage	occluded	front	cage	occluded	0	1	1
+pos-0014	411308202401062_1	411308202401062_2	easy	개	both_detected	front	indoor	small	front	indoor	small	0	1	1
+pos-0015	426336202500036_1	426336202500036_2	hard	개	both_detected	front	cage	small	front	cage	small	0	3	3
+pos-0016	411319202500505_1	411319202500505_2	mid	개	both_detected	front	cage	occluded	side	cage	occluded	0	1	1
+pos-0017	426325202400421_1	426325202400421_2	easy	개	both_detected	top	indoor	good	top	indoor	good	0	1	1
+pos-0018	411312202500139_1	411312202500139_2	hard	개	both_detected	side	outdoor	occluded	front	indoor	occluded	0	3	3
+pos-0019	426326202400665_1	426326202400665_2	mid	개	both_detected	top	indoor	good	top	indoor	blur	0	1	1
+pos-0020	428355202600048_1	428355202600048_2	easy	개	both_detected	side	cage	good	front	cage	good	0	1	1
+pos-0021	426331202600008_1	426331202600008_2	hard	개	both_detected	side	cage	dark	front	cage	dark	0	1	1
+pos-0022	411303202500744_1	411303202500744_2	mid	개	both_detected	front	indoor	good	front	indoor	good	0	1	1
+pos-0023	428355202500010_1	428355202500010_2	easy	개	both_detected	front	indoor	occluded	side	indoor	occluded	0	1	1
+pos-0024	413582202600579_1	413582202600579_2	hard	개	both_detected	front	plain	good	side	indoor	good	0	4	4
+pos-0025	413578202600960_1	413578202600960_2	mid	개	both_detected	front	cage	occluded	front	cage	occluded	0	1	1
+pos-0026	426331202400312_1	426331202400312_2	easy	개	both_detected	front	indoor	good	top	indoor	good	0	1	1
+pos-0027	427343202500174_1	427343202500174_2	hard	개	both_detected	front	indoor	occluded	front	indoor	good	0	2	2
+pos-0028	411302202600007_1	411302202600007_2	mid	개	both_detected	front	cage	good	front	cage	good	0	1	1
+pos-0029	426339202500088_1	426339202500088_2	easy	개	both_detected	front	cage	small	front	cage	small	0	1	1
+pos-0030	411305202500501_1	411305202500501_2	hard	개	both_detected	front	cage	good	front	indoor	occluded	0	23	21
+pos-0031	428350202400239_1	428350202400239_2	mid	개	both_detected	top	indoor	occluded	front	cage	occluded	0	3	3
+pos-0032	426329202500841_1	426329202500841_2	easy	개	both_detected	front	outdoor	occluded	front	outdoor	occluded	0	1	1
+pos-0033	411312202400937_1	411312202400937_2	hard	개	both_detected	front	indoor	good	side	indoor	good	0	9	9
+pos-0034	411319202400617_1	411319202400617_2	mid	개	both_detected	front	cage	dark	front	cage	dark	0	5	5
+pos-0035	411302202500097_1	411302202500097_2	easy	개	both_detected	top	indoor	good	front	indoor	good	0	1	1
+pos-0036	441378202601130_1	441378202601130_2	hard	개	both_detected	front	indoor	good	top	indoor	good	0	6	6
+pos-0037	411319202500283_1	411319202500283_2	mid	개	both_detected	front	cage	occluded	side	cage	occluded	0	4	4
+pos-0038	426333202500051_1	426333202500051_2	easy	개	both_detected	front	indoor	good	front	indoor	good	0	1	1
+pos-0039	411312202600004_1	411312202600004_2	hard	개	both_detected	front	indoor	good	side	indoor	good	0	42	37
+pos-0040	411305202400447_1	411305202400447_2	mid	개	both_detected	front	outdoor	good	top	outdoor	good	0	3	3
+pos-0041	413579202601117_1	413579202601117_2	easy	개	both_detected	front	indoor	occluded	front	indoor	occluded	0	1	1
+pos-0042	426335202500175_1	426335202500175_2	hard	개	one_fallback	top	indoor	good	top	indoor	good	0	3	2
+pos-0043	426337202600018_1	426337202600018_2	mid	개	one_fallback	side	indoor	occluded	front	indoor	occluded	0	3	3
+pos-0044	426340202500311_1	426340202500311_2	easy	개	one_fallback	front	plain	occluded	front	plain	occluded	0	1	
+pos-0045	427347202400981_1	427347202400981_2	hard	개	one_fallback	front	indoor	blur		indoor	no_animal	1	301	
+pos-0046	413578202600942_1	413578202600942_2	mid	개	one_fallback	top	indoor	good	front	plain	blur	0	1	1
+pos-0047	411313202400692_1	411313202400692_2	easy	개	one_fallback	front	indoor	small	front	indoor	good	0	1	1
+pos-0048	426337202500006_1	426337202500006_2	hard	개	one_fallback	side	cage	good	side	cage	good	0	3	1
+pos-0049	411302202500103_1	411302202500103_2	mid	개	one_fallback	front	indoor	good	side	indoor	good	0	3	
+pos-0050	429363202600102_1	429363202600102_2	easy	개	one_fallback	front	cage	good	front	cage	good	0	1	1
+pos-0051	426338202400693_1	426338202400693_2	hard	개	one_fallback	front	cage	occluded	back	cage	good	0	8	
+pos-0052	411302202500322_1	411302202500322_2	mid	개	one_fallback	side	cage	good	front	cage	good	0	3	
+pos-0053	428351202600059_1	428351202600059_2	easy	개	one_fallback	front	indoor	occluded	front	indoor	occluded	0	1	1
+pos-0054	427344202400366_1	427344202400366_2	hard	개	both_fallback	front	cage	dark		indoor	no_animal	1	233	
+pos-0055	428357202500027_1	428357202500027_2	mid	개	both_fallback	front	indoor	good	front	indoor	good	0	1	
+pos-0056	426329202500009_1	426329202500009_2	easy	개	both_fallback	front	cage	good	front	cage	good	0	1	
+pos-0057	427347202400950_1	427347202400950_2	hard	개	both_fallback	front	cage	good		indoor	no_animal	1	457	
+pos-0058	426337202500420_1	426337202500420_2	mid	개	both_fallback	side	cage	good	side	cage	good	0	1	
+pos-0059	426330202500004_1	426330202500004_2	easy	개	both_fallback	front	indoor	good	side	indoor	good	0	1	
+pos-0060	426337202500252_1	426337202500252_2	hard	고양이	both_detected	front	plain	occluded	front	plain	blur	0	5	5
+pos-0061	411305202500132_1	411305202500132_2	mid	고양이	both_detected	front	indoor	good	front	indoor	good	0	5	5
+pos-0062	426329202500772_1	426329202500772_2	easy	고양이	both_detected	front	cage	good	front	cage	good	0	1	1
+pos-0063	429362202600032_1	429362202600032_2	hard	고양이	both_detected	front	plain	occluded	side	plain	good	0	15	15
+pos-0064	411313202400282_1	411313202400282_2	mid	고양이	both_detected	front	cage	good	front	cage	good	0	1	1
+pos-0065	426335202400194_1	426335202400194_2	easy	고양이	both_detected	front	indoor	good	front	cage	good	0	1	1
+pos-0066	426332202500264_1	426332202500264_2	hard	고양이	both_detected	back	cage	dark	front	cage	dark	0	7	7
+pos-0067	426326202500221_1	426326202500221_2	mid	고양이	both_detected	front	indoor	good	top	indoor	good	0	3	3
+pos-0068	426338202500323_1	426338202500323_2	easy	고양이	both_detected	front	plain	occluded	front	plain	occluded	0	1	1
+pos-0069	426331202600278_1	426331202600278_2	hard	고양이	both_detected	front	plain	blur	back	plain	good	0	16	16
+pos-0070	426338202600036_1	426338202600036_2	mid	고양이	both_detected	front	plain	occluded	top	indoor	small	0	3	3
+pos-0071	426331202500163_1	426331202500163_2	easy	고양이	both_detected	front	cage	dark	side	cage	dark	0	1	1
+pos-0072	426332202600036_1	426332202600036_2	hard	고양이	both_detected	front	plain	occluded	top	plain	dark	0	29	29
+pos-0073	427341202400662_1	427341202400662_2	mid	고양이	both_detected	front	indoor	good	front	indoor	good	0	3	3
+pos-0074	426333202400694_1	426333202400694_2	easy	고양이	both_detected	front	cage	occluded	front	indoor	good	0	1	1
+pos-0075	430367202500003_1	430367202500003_2	hard	고양이	both_detected	back	outdoor	occluded	side	outdoor	good	0	3	3
+pos-0076	426338202600001_1	426338202600001_2	mid	고양이	both_detected	front	cage	good	front	cage	good	0	1	1
+pos-0077	426333202500229_1	426333202500229_2	easy	고양이	both_detected	front	cage	good	side	cage	good	0	1	1
+pos-0078	426332202600042_1	426332202600042_2	hard	고양이	both_detected	front	plain	occluded	top	plain	good	0	21	21
+pos-0079	427343202400949_1	427343202400949_2	mid	고양이	both_detected	front	indoor	occluded	front	indoor	good	0	3	3
+pos-0080	428350202600002_1	428350202600002_2	easy	고양이	both_detected	front	cage	good	front	cage	good	0	1	1
+pos-0081	426332202600037_1	426332202600037_2	hard	고양이	both_detected	front	plain	occluded	top	plain	dark	0	44	43
+pos-0082	411303202600283_1	411303202600283_2	mid	고양이	both_detected	front	cage	good	front	cage	good	0	3	3
+pos-0083	411313202400800_1	411313202400800_2	easy	고양이	both_detected	top	indoor	good	top	indoor	good	0	1	1
+pos-0084	411312202600314_1	411312202600314_2	hard	고양이	both_detected	side	cage	good	side	indoor	good	0	5	5
+pos-0085	426333202500221_1	426333202500221_2	mid	고양이	both_detected	side	indoor	good	back	indoor	good	0	6	6
+pos-0086	426332202500527_1	426332202500527_2	easy	고양이	both_detected	side	cage	good	front	cage	good	0	1	1
+pos-0087	411309202600009_1	411309202600009_2	hard	고양이	both_detected	side	outdoor	good	front	outdoor	good	0	3	3
+pos-0088	427343202400957_1	427343202400957_2	mid	고양이	both_detected	side	indoor	good	front	indoor	good	0	3	3
+pos-0089	411303202500742_1	411303202500742_2	easy	고양이	both_detected	front	cage	good	front	cage	good	0	1	1
+pos-0090	426332202600043_1	426332202600043_2	hard	고양이	both_detected	front	plain	occluded	top	plain	good	0	23	23
+pos-0091	426329202500434_1	426329202500434_2	hard	고양이	one_fallback	side	cage	good	top	plain	occluded	0	84	
+pos-0092	427348202501111_1	427348202501111_2	mid	고양이	one_fallback	front	indoor	occluded	front	indoor	occluded	0	1	1
+pos-0093	411312202400940_1	411312202400940_2	easy	고양이	one_fallback	front	cage	good	front	plain	good	0	1	
+pos-0094	426329202500789_1	426329202500789_2	hard	고양이	one_fallback	side	cage	good	top	indoor	good	0	3	2
+pos-0095	426331202500654_1	426331202500654_2	mid	고양이	one_fallback	front	cage	good	side	cage	good	0	1	1
+pos-0096	426340202600042_1	426340202600042_2	hard	고양이	one_fallback	front	indoor	good	side	indoor	good	0	3	2
+pos-0097	428352202600010_1	428352202600010_2	mid	고양이	one_fallback	front	indoor	occluded	front	indoor	occluded	0	1	1
+pos-0098	411313202400523_1	411313202400523_2	hard	고양이	one_fallback	front	cage	good	side	cage	blur	0	10	
+pos-0099	448567202601188_1	448567202601188_2	mid	고양이	one_fallback	front	cage	good	side	cage	good	0	1	
+pos-0100	427345202600103_1	427345202600103_2	hard	고양이	both_fallback	front	cage	good		indoor	no_animal	1	409	
+pos-0101	411302202400902_1	411302202400902_2	mid	고양이	both_fallback	front	cage	good	front	cage	good	0	1	
+pos-0102	427341202500061_1	427341202500061_2	easy	고양이	both_fallback	front	indoor	good	front	indoor	good	0	1	
+pos-0103	411312202500332_1	411312202500332_2	easy	고양이	both_fallback	front	indoor	occluded	front	indoor	good	0	1	
+pos-0104	411313202500003_1	411313202500003_2	hard	고양이	both_detected	front	indoor	blur	top	indoor	good	0	8	8
+pos-0105	426328202600116_1	426328202600116_2	hard	기타	both_detected	front	cage	blur	side	cage	good	0	9	9
+pos-0106	428349202600020_1	428349202600020_2	mid	기타	both_detected	side	plain	good	front	plain	good	0	3	3
+pos-0107	428349202600117_1	428349202600117_2	easy	기타	both_detected	side	plain	good	side	plain	good	0	1	1
+pos-0108	427348202501121_1	427348202501121_2	hard	기타	both_detected	front	indoor	dark	side	indoor	dark	0	2	2
+pos-0109	411302202400908_1	411302202400908_2	mid	기타	both_detected	front	indoor	good	side	indoor	good	0	1	1
+pos-0110	447521202600356_1	447521202600356_2	easy	기타	both_detected	top	plain	good	top	outdoor	good	0	1	1
+pos-0111	428349202600022_1	428349202600022_2	mid	기타	both_detected	front	plain	good	front	plain	good	0	1	1
+pos-0112	426338202600037_1	426338202600037_2	easy	기타	both_detected	side	indoor	good	side	indoor	good	0	1	1
+pos-0113	429629202500015_1	429629202500015_2	mid	기타	both_detected	front	indoor	occluded	front	cage	blur	0	2	2
+pos-0114	413582202600642_1	413582202600642_2	easy	기타	both_detected	front	cage	good	side	cage	good	0	1	1
+pos-0115	427514202500023_1	427514202500023_2	hard	기타	one_fallback	front	cage	occluded	side	cage	occluded	0	1	
+pos-0116	411305202500070_1	411305202500070_2	mid	기타	one_fallback	back	plain	blur	top	plain	good	0	2	
+pos-0117	441554202601669_1	441554202601669_2	easy	기타	one_fallback	side	cage	good	front	cage	good	0	3	1
+pos-0118	426326202500171_1	426326202500171_2	hard	기타	both_fallback	front	plain	occluded	top	plain	dark	0	6	
+pos-0119	426338202500051_1	426338202500051_2	mid	기타	both_fallback	side	cage	small	side	cage	small	0	3	

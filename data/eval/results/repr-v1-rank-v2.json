@@ -1,0 +1,392 @@
+{
+ "gallery_size": 469,
+ "dim": 768,
+ "k": [
+  1,
+  5,
+  10
+ ],
+ "pos_pairs": 120,
+ "dropped_all_duplicates": 0,
+ "no_animal_excluded": 4,
+ "pairs_evaluated": 116,
+ "overall": {
+  "recall@1": 0.5086,
+  "recall@5": 0.8103,
+  "recall@10": 0.8966,
+  "mrr": 0.6249,
+  "n": 116,
+  "median_rank": 1
+ },
+ "by_band": {
+  "easy": {
+   "recall@1": 0.9737,
+   "recall@5": 1.0,
+   "recall@10": 1.0,
+   "mrr": 0.9825,
+   "n": 38,
+   "median_rank": 1
+  },
+  "hard": {
+   "recall@1": 0.0541,
+   "recall@5": 0.4324,
+   "recall@10": 0.6757,
+   "mrr": 0.2252,
+   "n": 37,
+   "median_rank": 6
+  },
+  "mid": {
+   "recall@1": 0.4878,
+   "recall@5": 0.9756,
+   "recall@10": 1.0,
+   "mrr": 0.6541,
+   "n": 41,
+   "median_rank": 2
+  }
+ },
+ "by_species": {
+  "개": {
+   "recall@1": 0.5614,
+   "recall@5": 0.8421,
+   "recall@10": 0.9123,
+   "mrr": 0.6658,
+   "n": 57,
+   "median_rank": 1
+  },
+  "고양이": {
+   "recall@1": 0.4545,
+   "recall@5": 0.75,
+   "recall@10": 0.8409,
+   "mrr": 0.5627,
+   "n": 44,
+   "median_rank": 3
+  },
+  "기타": {
+   "recall@1": 0.4667,
+   "recall@5": 0.8667,
+   "recall@10": 1.0,
+   "mrr": 0.6519,
+   "n": 15,
+   "median_rank": 2
+  }
+ },
+ "by_fallback_pair": {
+  "both_detected": {
+   "recall@1": 0.4881,
+   "recall@5": 0.7857,
+   "recall@10": 0.869,
+   "mrr": 0.6021,
+   "n": 84,
+   "median_rank": 2
+  },
+  "both_fallback": {
+   "recall@1": 0.7778,
+   "recall@5": 0.8889,
+   "recall@10": 1.0,
+   "mrr": 0.8333,
+   "n": 9,
+   "median_rank": 1
+  },
+  "one_fallback": {
+   "recall@1": 0.4783,
+   "recall@5": 0.8696,
+   "recall@10": 0.9565,
+   "mrr": 0.6262,
+   "n": 23,
+   "median_rank": 2
+  }
+ },
+ "by_query_tag": {
+  "angle": {
+   "back": {
+    "recall@1": 0.0,
+    "recall@5": 0.6667,
+    "recall@10": 1.0,
+    "mrr": 0.3254,
+    "n": 3,
+    "median_rank": 3
+   },
+   "front": {
+    "recall@1": 0.5422,
+    "recall@5": 0.7831,
+    "recall@10": 0.8795,
+    "mrr": 0.6393,
+    "n": 83,
+    "median_rank": 1
+   },
+   "side": {
+    "recall@1": 0.35,
+    "recall@5": 0.9,
+    "recall@10": 0.95,
+    "mrr": 0.5356,
+    "n": 20,
+    "median_rank": 3
+   },
+   "top": {
+    "recall@1": 0.7,
+    "recall@5": 0.9,
+    "recall@10": 0.9,
+    "mrr": 0.7738,
+    "n": 10,
+    "median_rank": 1
+   }
+  },
+  "background": {
+   "cage": {
+    "recall@1": 0.6047,
+    "recall@5": 0.8372,
+    "recall@10": 0.9535,
+    "mrr": 0.6903,
+    "n": 43,
+    "median_rank": 1
+   },
+   "indoor": {
+    "recall@1": 0.5532,
+    "recall@5": 0.8723,
+    "recall@10": 0.9574,
+    "mrr": 0.6815,
+    "n": 47,
+    "median_rank": 1
+   },
+   "outdoor": {
+    "recall@1": 0.25,
+    "recall@5": 0.75,
+    "recall@10": 0.75,
+    "mrr": 0.4218,
+    "n": 8,
+    "median_rank": 3
+   },
+   "plain": {
+    "recall@1": 0.2778,
+    "recall@5": 0.6111,
+    "recall@10": 0.6667,
+    "mrr": 0.4108,
+    "n": 18,
+    "median_rank": 3
+   }
+  },
+  "quality": {
+   "blur": {
+    "recall@1": 0.0,
+    "recall@5": 0.25,
+    "recall@10": 0.75,
+    "mrr": 0.1997,
+    "n": 4,
+    "median_rank": 8
+   },
+   "dark": {
+    "recall@1": 0.4,
+    "recall@5": 0.8,
+    "recall@10": 1.0,
+    "mrr": 0.5686,
+    "n": 5,
+    "median_rank": 2
+   },
+   "good": {
+    "recall@1": 0.5385,
+    "recall@5": 0.8462,
+    "recall@10": 0.9077,
+    "mrr": 0.647,
+    "n": 65,
+    "median_rank": 1
+   },
+   "occluded": {
+    "recall@1": 0.5135,
+    "recall@5": 0.7838,
+    "recall@10": 0.8649,
+    "mrr": 0.625,
+    "n": 37,
+    "median_rank": 1
+   },
+   "small": {
+    "recall@1": 0.6,
+    "recall@5": 1.0,
+    "recall@10": 1.0,
+    "mrr": 0.7333,
+    "n": 5,
+    "median_rank": 1
+   }
+  }
+ },
+ "by_target_tag": {
+  "angle": {
+   "back": {
+    "recall@1": 0.0,
+    "recall@5": 0.0,
+    "recall@10": 0.6667,
+    "mrr": 0.1181,
+    "n": 3,
+    "median_rank": 8
+   },
+   "front": {
+    "recall@1": 0.6557,
+    "recall@5": 0.9672,
+    "recall@10": 0.9836,
+    "mrr": 0.7615,
+    "n": 61,
+    "median_rank": 1
+   },
+   "side": {
+    "recall@1": 0.4667,
+    "recall@5": 0.7667,
+    "recall@10": 0.9,
+    "mrr": 0.5827,
+    "n": 30,
+    "median_rank": 2
+   },
+   "top": {
+    "recall@1": 0.2273,
+    "recall@5": 0.5455,
+    "recall@10": 0.6818,
+    "mrr": 0.3725,
+    "n": 22,
+    "median_rank": 3
+   }
+  },
+  "background": {
+   "cage": {
+    "recall@1": 0.5952,
+    "recall@5": 0.8571,
+    "recall@10": 0.9762,
+    "mrr": 0.6968,
+    "n": 42,
+    "median_rank": 1
+   },
+   "indoor": {
+    "recall@1": 0.5,
+    "recall@5": 0.86,
+    "recall@10": 0.94,
+    "mrr": 0.6338,
+    "n": 50,
+    "median_rank": 1
+   },
+   "outdoor": {
+    "recall@1": 0.4286,
+    "recall@5": 0.8571,
+    "recall@10": 0.8571,
+    "mrr": 0.5765,
+    "n": 7,
+    "median_rank": 3
+   },
+   "plain": {
+    "recall@1": 0.3529,
+    "recall@5": 0.5294,
+    "recall@10": 0.5882,
+    "mrr": 0.4406,
+    "n": 17,
+    "median_rank": 5
+   }
+  },
+  "quality": {
+   "blur": {
+    "recall@1": 0.3333,
+    "recall@5": 0.8333,
+    "recall@10": 1.0,
+    "mrr": 0.5222,
+    "n": 6,
+    "median_rank": 2
+   },
+   "dark": {
+    "recall@1": 0.25,
+    "recall@5": 0.5,
+    "recall@10": 0.75,
+    "mrr": 0.3833,
+    "n": 8,
+    "median_rank": 5
+   },
+   "good": {
+    "recall@1": 0.4932,
+    "recall@5": 0.8082,
+    "recall@10": 0.8904,
+    "mrr": 0.6139,
+    "n": 73,
+    "median_rank": 2
+   },
+   "occluded": {
+    "recall@1": 0.7083,
+    "recall@5": 0.875,
+    "recall@10": 0.9167,
+    "mrr": 0.7697,
+    "n": 24,
+    "median_rank": 1
+   },
+   "small": {
+    "recall@1": 0.4,
+    "recall@5": 1.0,
+    "recall@10": 1.0,
+    "mrr": 0.6,
+    "n": 5,
+    "median_rank": 3
+   }
+  }
+ },
+ "no_animal_pairs": [
+  {
+   "pair_id": "pos-0045",
+   "query_id": "427347202400981_1",
+   "target_id": "427347202400981_2",
+   "q_quality": "blur",
+   "t_quality": "no_animal",
+   "rank": 301
+  },
+  {
+   "pair_id": "pos-0054",
+   "query_id": "427344202400366_1",
+   "target_id": "427344202400366_2",
+   "q_quality": "dark",
+   "t_quality": "no_animal",
+   "rank": 233
+  },
+  {
+   "pair_id": "pos-0057",
+   "query_id": "427347202400950_1",
+   "target_id": "427347202400950_2",
+   "q_quality": "good",
+   "t_quality": "no_animal",
+   "rank": 457
+  },
+  {
+   "pair_id": "pos-0100",
+   "query_id": "427345202600103_1",
+   "target_id": "427345202600103_2",
+   "q_quality": "good",
+   "t_quality": "no_animal",
+   "rank": 409
+  }
+ ],
+ "fallback_gallery_excluded": {
+  "gallery_size": 396,
+  "dropped_fallback_target": 19,
+  "overall": {
+   "recall@1": 0.5155,
+   "recall@5": 0.8247,
+   "recall@10": 0.8866,
+   "mrr": 0.6341,
+   "n": 97,
+   "median_rank": 1
+  },
+  "by_fallback_pair": {
+   "both_detected": {
+    "recall@1": 0.4881,
+    "recall@5": 0.7976,
+    "recall@10": 0.869,
+    "mrr": 0.6033,
+    "n": 84,
+    "median_rank": 2
+   },
+   "one_fallback": {
+    "recall@1": 0.6923,
+    "recall@5": 1.0,
+    "recall@10": 1.0,
+    "mrr": 0.8333,
+    "n": 13,
+    "median_rank": 1
+   }
+  }
+ },
+ "dataset": "datasets/repr-v1",
+ "vectors_source": [
+  "vectors",
+  "vectors-samples"
+ ]
+}

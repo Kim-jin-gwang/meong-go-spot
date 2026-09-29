@@ -1,0 +1,25 @@
+{
+  "name": "root",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Monorepo root: unified check/fix commands and git hooks. Windows team — npm scripts instead of Makefile.",
+  "scripts": {
+    "setup": "npm install",
+    "check": "run-s check:android check:be",
+    "check:android": "node scripts/gradlew.mjs android ktlintCheck testDebugUnitTest",
+    "check:be": "node scripts/gradlew.mjs backend check",
+    "check:data": "python -m pytest data --ignore=data/mapreduce -q",
+    "fix": "run-s fix:android fix:be",
+    "fix:android": "node scripts/gradlew.mjs android ktlintFormat",
+    "fix:be": "node scripts/gradlew.mjs backend spotlessApply",
+    "build:android": "node scripts/gradlew.mjs android assembleDebug",
+    "dev:be": "node scripts/gradlew.mjs backend bootRun",
+    "prepare": "lefthook install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.1",
+    "@commitlint/config-conventional": "^21.2.0",
+    "lefthook": "^2.1.10",
+    "npm-run-all2": "^9.0.3"
+  }
+}

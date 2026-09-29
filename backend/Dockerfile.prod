@@ -1,0 +1,25 @@
+# ⚠️ 초안 — 배포 서버 발급 전(ADR-001 D7). 로컬 docker build 검증만 완료된 상태.
+# 빌드: 저장소 루트가 아니라 backend/를 context로 사용한다 (compose.prod.yml 참조).
+
+FROM eclipse-temurin:21-jdk AS build
+WORKDIR /app
+
+# 의존성 레이어 캐시: 빌드 스크립트만 먼저 복사해 소스 변경 시 재다운로드를 피한다.
+COPY gradlew settings.gradle build.gradle ./
+COPY gradle gradle
+RUN chmod +x gradlew && ./gradlew --no-daemon dependencies --quiet || true
+
+COPY config config
+COPY src src
+RUN ./gradlew --no-daemon bootJar
+
+FROM eclipse-temurin:21-jre
+WORKDIR /app
+# uid 를 고정한다. 운영 배포는 키 자료 디렉터리를 이 uid 소유로 마운트하므로
+# (infra/scripts/setup-prod-secrets.py, compose.prod.yml) uid 가 바뀌면 컨테이너가
+# 비밀 파일을 읽지 못해 기동에 실패한다. 양쪽에서 같은 숫자를 명시해 결합을 드러낸다.
+RUN useradd --system --uid 999 app
+USER app
+COPY --from=build /app/build/libs/*.jar app.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "app.jar"]

@@ -1,0 +1,12 @@
+# 5분마다 cluster-watch.service 실행 (서버 2). 부팅 3분 뒤 첫 실행 — Hadoop·Kafka 가 올라올 시간을 준다.
+# 설치: sudo cp cluster-watch.{service,timer} /etc/systemd/system/ && sudo systemctl daemon-reload && sudo systemctl enable --now cluster-watch.timer
+[Unit]
+Description=Run cluster-watch every 5 minutes
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=5min
+AccuracySec=30s
+
+[Install]
+WantedBy=timers.target

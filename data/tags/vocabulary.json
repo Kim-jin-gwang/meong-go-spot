@@ -1,0 +1,1907 @@
+{
+  "vocab_version": "tags-v1",
+  "status": "PROPOSAL — 태그 원천 변경(CLIP 사진 추론 보류 → 사용자 입력 + 공공 API 필드 정규화)은 팀 합의 대기. 어휘·매핑 자체는 실데이터(2024-01~2026-09 공공 수집분 257,190건) 기반 초안",
+  "evidence": "data/experiments/2026-09-09-tag-vocabulary/",
+  "tag_format": "<attribute>:<code> — 자카드 집합 원소. 스키마는 jaccard-input.schema.json",
+  "normalization_rules": {
+    "common": [
+      "1) '기타(...)' 래퍼 제거: '기타(흰색)' → '흰색'",
+      "2) 복합 표기 분리: 구분자 [,&+/·.] 및 공백으로 토큰 분할",
+      "3) 토큰 정규화: 공백·구두점([\\s·\\-()\\[\\]]) 제거",
+      "4) 정규화 토큰을 label·aliases(같은 정규화 적용)와 대조해 codes로 치환 — 복합 단일 토큰(예: '흑백')은 여러 코드로 확장",
+      "5) color.ignore_tokens(수식어·서술어 — '옅은', '바탕에' 등)는 색 정보가 없으므로 매핑 실패로 세지 않고 버린다",
+      "6) 매핑 실패 토큰·'모름'·결측은 태그 생략(집합 미포함)하고 생성기가 unmapped 로그로 남긴다 — 공통 '미상' 토큰은 자카드 가짜 유사도를 만들기 때문"
+    ],
+    "weight_to_size": "공공 weight '3.2(Kg)' → 선두 숫자 파싱(kg) → small <8 / medium 8~20 / large ≥20. 파싱 실패(전체의 0.02%)는 태그 생략"
+  },
+  "attributes": {
+    "species": {
+      "sources": [
+        "공공 upKindCd",
+        "사용자 species 선택값(DOG/CAT/OTHER — 필수 입력, 모름 없음)"
+      ],
+      "values": [
+        {
+          "code": "dog",
+          "label": "개",
+          "map": [
+            "417000",
+            "DOG",
+            "개"
+          ]
+        },
+        {
+          "code": "cat",
+          "label": "고양이",
+          "map": [
+            "422400",
+            "CAT",
+            "고양이"
+          ]
+        },
+        {
+          "code": "other",
+          "label": "기타",
+          "map": [
+            "429900",
+            "OTHER",
+            "기타"
+          ]
+        }
+      ]
+    },
+    "breed": {
+      "sources": [
+        "공공 kindCd·kindNm — 코드 테이블 기반 통제 어휘(2024+ 실측 표기 변형 0건)이므로 kindCd를 canonical 코드로 채택 (code = 'k'+kindCd)",
+        "사용자 breed_name 자유 입력 — label·aliases 정규화 매핑, '모름' 허용(UR-FND-002)"
+      ],
+      "unmapped_policy": "매핑 실패·'모름'은 태그 생략 + unmapped 로그. '기타' 버킷 태그를 만들지 않는다(믹스견 k000114·믹스묘 k000212·기타 k000115·기타축종 k000117은 공공 코드 테이블에 실존하는 카테고리라 그대로 유지 — 실데이터의 81%)",
+      "values": [
+        {
+          "code": "k000114",
+          "label": "믹스견",
+          "species": "dog",
+          "aliases": [
+            "믹스",
+            "잡종",
+            "잡종견",
+            "발바리",
+            "믹스독"
+          ]
+        },
+        {
+          "code": "k000200",
+          "label": "한국 고양이",
+          "species": "cat",
+          "aliases": [
+            "코숏",
+            "코리안숏헤어",
+            "코리안쇼트헤어",
+            "길고양이",
+            "토종고양이"
+          ]
+        },
+        {
+          "code": "k000212",
+          "label": "믹스묘",
+          "species": "cat",
+          "aliases": [
+            "믹스고양이",
+            "잡종묘"
+          ]
+        },
+        {
+          "code": "k000128",
+          "label": "푸들",
+          "species": "dog",
+          "aliases": [
+            "미니푸들",
+            "토이푸들"
+          ]
+        },
+        {
+          "code": "k000072",
+          "label": "말티즈",
+          "species": "dog",
+          "aliases": [
+            "몰티즈",
+            "말티스",
+            "마르티즈",
+            "말티",
+            "몰티스"
+          ]
+        },
+        {
+          "code": "k000117",
+          "label": "기타축종",
+          "species": "other"
+        },
+        {
+          "code": "k000089",
+          "label": "포메라니안",
+          "species": "dog",
+          "aliases": [
+            "포메",
+            "포메라니언"
+          ]
+        },
+        {
+          "code": "k000067",
+          "label": "진도견",
+          "species": "dog",
+          "aliases": [
+            "진돗개",
+            "진도개",
+            "진도"
+          ]
+        },
+        {
+          "code": "k000018",
+          "label": "비숑 프리제",
+          "species": "dog",
+          "aliases": [
+            "비숑",
+            "비션",
+            "비숑프리쩨"
+          ]
+        },
+        {
+          "code": "k000115",
+          "label": "기타",
+          "species": "dog"
+        },
+        {
+          "code": "k000069",
+          "label": "라브라도 리트리버",
+          "species": "dog",
+          "aliases": [
+            "래브라도리트리버",
+            "라브라도",
+            "래브라도",
+            "래브라도레트리버"
+          ]
+        },
+        {
+          "code": "k000101",
+          "label": "시츄",
+          "species": "dog",
+          "aliases": [
+            "시추",
+            "시쭈"
+          ]
+        },
+        {
+          "code": "k000100",
+          "label": "시바",
+          "species": "dog",
+          "aliases": [
+            "시바견",
+            "시바이누"
+          ]
+        },
+        {
+          "code": "k000054",
+          "label": "골든 리트리버",
+          "species": "dog",
+          "aliases": [
+            "골든레트리버",
+            "골든",
+            "골드리트리버"
+          ]
+        },
+        {
+          "code": "k000032",
+          "label": "치와와",
+          "species": "dog"
+        },
+        {
+          "code": "k000020",
+          "label": "보더 콜리",
+          "species": "dog",
+          "aliases": [
+            "보더콜리"
+          ]
+        },
+        {
+          "code": "k000124",
+          "label": "스피츠",
+          "species": "dog"
+        },
+        {
+          "code": "k000050",
+          "label": "프렌치 불독",
+          "species": "dog",
+          "aliases": [
+            "프렌치불도그",
+            "프불"
+          ]
+        },
+        {
+          "code": "k000113",
+          "label": "요크셔 테리어",
+          "species": "dog",
+          "aliases": [
+            "요키",
+            "요크셔"
+          ]
+        },
+        {
+          "code": "k000108",
+          "label": "웰시 코기 펨브로크",
+          "species": "dog",
+          "aliases": [
+            "웰시코기",
+            "웰시콜기",
+            "코기"
+          ]
+        },
+        {
+          "code": "k00214",
+          "label": "페르시안",
+          "species": "cat"
+        },
+        {
+          "code": "k000103",
+          "label": "시베리안 허스키",
+          "species": "dog",
+          "aliases": [
+            "허스키"
+          ]
+        },
+        {
+          "code": "k000172",
+          "label": "러시안 블루",
+          "species": "cat",
+          "aliases": [
+            "러시안블루",
+            "러숀블루"
+          ]
+        },
+        {
+          "code": "k000188",
+          "label": "스코티시폴드",
+          "species": "cat",
+          "aliases": [
+            "스코티쉬폴드",
+            "스캇티쉬폴드"
+          ]
+        },
+        {
+          "code": "k000195",
+          "label": "터키시 앙고라",
+          "species": "cat",
+          "aliases": [
+            "터키쉬앙고라",
+            "앙고라"
+          ]
+        },
+        {
+          "code": "k000038",
+          "label": "스탠다드 닥스훈트",
+          "species": "dog",
+          "aliases": [
+            "닥스훈트",
+            "닥스훈드",
+            "닥스"
+          ]
+        },
+        {
+          "code": "k00213",
+          "label": "레그돌",
+          "species": "cat",
+          "aliases": [
+            "랙돌",
+            "라그돌"
+          ]
+        },
+        {
+          "code": "k000181",
+          "label": "브리티시 쇼트헤어",
+          "species": "cat",
+          "aliases": [
+            "브리티쉬숏헤어",
+            "브리티시숏헤어",
+            "브숏"
+          ]
+        },
+        {
+          "code": "k000201",
+          "label": "기타",
+          "species": "cat"
+        },
+        {
+          "code": "k000205",
+          "label": "웰시 코기 카디건",
+          "species": "dog"
+        },
+        {
+          "code": "k000192",
+          "label": "아메리칸 쇼트헤어",
+          "species": "cat",
+          "aliases": [
+            "아메리칸숏헤어",
+            "아메숏"
+          ]
+        },
+        {
+          "code": "k000077",
+          "label": "미니어쳐 핀셔",
+          "species": "dog",
+          "aliases": [
+            "미니핀",
+            "미니어처핀셔"
+          ]
+        },
+        {
+          "code": "k000122",
+          "label": "셰퍼드",
+          "species": "dog"
+        },
+        {
+          "code": "k000003",
+          "label": "풍산견",
+          "species": "dog"
+        },
+        {
+          "code": "k000125",
+          "label": "코카 스파니엘",
+          "species": "dog",
+          "aliases": [
+            "코카스패니얼",
+            "코커스패니얼",
+            "코카"
+          ]
+        },
+        {
+          "code": "k000096",
+          "label": "사모예드",
+          "species": "dog"
+        },
+        {
+          "code": "k000126",
+          "label": "포인터",
+          "species": "dog"
+        },
+        {
+          "code": "k000184",
+          "label": "샴",
+          "species": "cat"
+        },
+        {
+          "code": "k000001",
+          "label": "삽살개",
+          "species": "dog"
+        },
+        {
+          "code": "k000107",
+          "label": "토이 푸들",
+          "species": "dog"
+        },
+        {
+          "code": "k000123",
+          "label": "슈나우져",
+          "species": "dog",
+          "aliases": [
+            "슈나우저",
+            "미니어처슈나우저"
+          ]
+        },
+        {
+          "code": "k000013",
+          "label": "비글",
+          "species": "dog"
+        },
+        {
+          "code": "k000022",
+          "label": "보스턴 테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000175",
+          "label": "먼치킨",
+          "species": "cat"
+        },
+        {
+          "code": "k000105",
+          "label": "스탠다드 푸들",
+          "species": "dog"
+        },
+        {
+          "code": "k000120",
+          "label": "도사",
+          "species": "dog"
+        },
+        {
+          "code": "k000060",
+          "label": "이탈리안 그레이 하운드",
+          "species": "dog"
+        },
+        {
+          "code": "k000197",
+          "label": "페르시안-페르시안 친칠라",
+          "species": "cat"
+        },
+        {
+          "code": "k000146",
+          "label": "말라뮤트",
+          "species": "dog"
+        },
+        {
+          "code": "k000142",
+          "label": "라이카",
+          "species": "dog"
+        },
+        {
+          "code": "k000219",
+          "label": "도사 믹스견",
+          "species": "dog"
+        },
+        {
+          "code": "k000041",
+          "label": "도베르만",
+          "species": "dog"
+        },
+        {
+          "code": "k000056",
+          "label": "그레이 하운드",
+          "species": "dog"
+        },
+        {
+          "code": "k000078",
+          "label": "미니어쳐 푸들",
+          "species": "dog"
+        },
+        {
+          "code": "k000090",
+          "label": "퍼그",
+          "species": "dog"
+        },
+        {
+          "code": "k000193",
+          "label": "아비시니안",
+          "species": "cat"
+        },
+        {
+          "code": "k000087",
+          "label": "페키니즈",
+          "species": "dog"
+        },
+        {
+          "code": "k000189",
+          "label": "스핑크스",
+          "species": "cat"
+        },
+        {
+          "code": "k000035",
+          "label": "차우차우",
+          "species": "dog"
+        },
+        {
+          "code": "k000015",
+          "label": "베들링턴 테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000076",
+          "label": "미니어쳐 닥스훈트",
+          "species": "dog"
+        },
+        {
+          "code": "k000170",
+          "label": "노르웨이 숲",
+          "species": "cat"
+        },
+        {
+          "code": "k000179",
+          "label": "벵갈",
+          "species": "cat"
+        },
+        {
+          "code": "k000099",
+          "label": "셔틀랜드 쉽독",
+          "species": "dog"
+        },
+        {
+          "code": "k000027",
+          "label": "불독",
+          "species": "dog"
+        },
+        {
+          "code": "k000135",
+          "label": "핏불테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000152",
+          "label": "마리노이즈",
+          "species": "dog"
+        },
+        {
+          "code": "k000084",
+          "label": "올드 잉글리쉬 쉽독",
+          "species": "dog"
+        },
+        {
+          "code": "k000046",
+          "label": "잉글리쉬 세터",
+          "species": "dog"
+        },
+        {
+          "code": "k000074",
+          "label": "미디엄 푸들",
+          "species": "dog"
+        },
+        {
+          "code": "k000052",
+          "label": "저먼 셰퍼드 독",
+          "species": "dog"
+        },
+        {
+          "code": "k000025",
+          "label": "브리타니 스파니엘",
+          "species": "dog"
+        },
+        {
+          "code": "k000150",
+          "label": "아메리칸불리",
+          "species": "dog"
+        },
+        {
+          "code": "k000039",
+          "label": "달마시안",
+          "species": "dog"
+        },
+        {
+          "code": "k000118",
+          "label": "그레이트 피레니즈",
+          "species": "dog"
+        },
+        {
+          "code": "k000030",
+          "label": "캐벌리어 킹 찰스 스파니엘",
+          "species": "dog"
+        },
+        {
+          "code": "k000085",
+          "label": "빠삐용(콘티넨탈 토이 스파니엘)",
+          "species": "dog"
+        },
+        {
+          "code": "k000061",
+          "label": "잭 러셀 테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000034",
+          "label": "샤페이",
+          "species": "dog"
+        },
+        {
+          "code": "k000111",
+          "label": "휘펫",
+          "species": "dog"
+        },
+        {
+          "code": "k000093",
+          "label": "래빗 닥스훈트",
+          "species": "dog"
+        },
+        {
+          "code": "k000155",
+          "label": "동경견",
+          "species": "dog"
+        },
+        {
+          "code": "k000079",
+          "label": "미니어쳐 슈나우저",
+          "species": "dog"
+        },
+        {
+          "code": "k000176",
+          "label": "메인쿤",
+          "species": "cat"
+        },
+        {
+          "code": "k000006",
+          "label": "아키다",
+          "species": "dog"
+        },
+        {
+          "code": "k00216",
+          "label": "노퍽 테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000216",
+          "label": "브리티쉬롱헤어",
+          "species": "cat"
+        },
+        {
+          "code": "k000045",
+          "label": "잉글리쉬 포인터",
+          "species": "dog"
+        },
+        {
+          "code": "k000149",
+          "label": "울프독",
+          "species": "dog"
+        },
+        {
+          "code": "k000007",
+          "label": "알라스칸 말라뮤트",
+          "species": "dog"
+        },
+        {
+          "code": "k000009",
+          "label": "아메리칸 코카 스파니엘",
+          "species": "dog"
+        },
+        {
+          "code": "k000051",
+          "label": "저먼 포인터",
+          "species": "dog"
+        },
+        {
+          "code": "k000028",
+          "label": "카네 코르소",
+          "species": "dog"
+        },
+        {
+          "code": "k000121",
+          "label": "로트와일러",
+          "species": "dog"
+        },
+        {
+          "code": "k000036",
+          "label": "콜리",
+          "species": "dog"
+        },
+        {
+          "code": "k000224",
+          "label": "핏불테리어 믹스견",
+          "species": "dog"
+        },
+        {
+          "code": "k000199",
+          "label": "하일랜드 폴드",
+          "species": "cat"
+        },
+        {
+          "code": "k000151",
+          "label": "시베리안라이카",
+          "species": "dog"
+        },
+        {
+          "code": "k000037",
+          "label": "꼬똥 드 뚤레아",
+          "species": "dog"
+        },
+        {
+          "code": "k000134",
+          "label": "화이트테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000171",
+          "label": "데본 렉스",
+          "species": "cat"
+        },
+        {
+          "code": "k000083",
+          "label": "노리치 테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000137",
+          "label": "올드 잉글리쉬 불독",
+          "species": "dog"
+        },
+        {
+          "code": "k000026",
+          "label": "불 테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000094",
+          "label": "로트와일러",
+          "species": "dog"
+        },
+        {
+          "code": "k000130",
+          "label": "화이트리트리버",
+          "species": "dog"
+        },
+        {
+          "code": "k000062",
+          "label": "재패니즈 스피츠",
+          "species": "dog"
+        },
+        {
+          "code": "k000164",
+          "label": "벨지안 셰퍼드 독(그로넨달)",
+          "species": "dog"
+        },
+        {
+          "code": "k000185",
+          "label": "셀커크 렉스",
+          "species": "cat"
+        },
+        {
+          "code": "k000178",
+          "label": "버만",
+          "species": "cat"
+        },
+        {
+          "code": "k000044",
+          "label": "잉글리쉬 코카 스파니엘",
+          "species": "dog"
+        },
+        {
+          "code": "k000097",
+          "label": "스코티쉬 테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000021",
+          "label": "보르조이",
+          "species": "dog"
+        },
+        {
+          "code": "k000138",
+          "label": "페터데일테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000017",
+          "label": "버니즈 마운틴 독",
+          "species": "dog"
+        },
+        {
+          "code": "k000016",
+          "label": "벨지안 셰퍼드 독",
+          "species": "dog"
+        },
+        {
+          "code": "k000008",
+          "label": "아메리칸 아키다",
+          "species": "dog"
+        },
+        {
+          "code": "k000055",
+          "label": "그레이트 덴",
+          "species": "dog"
+        },
+        {
+          "code": "k000104",
+          "label": "세인트 버나드",
+          "species": "dog"
+        },
+        {
+          "code": "k000049",
+          "label": "플랫 코티드 리트리버",
+          "species": "dog"
+        },
+        {
+          "code": "k000004",
+          "label": "아프간 하운드",
+          "species": "dog"
+        },
+        {
+          "code": "k000163",
+          "label": "와이마라너",
+          "species": "dog"
+        },
+        {
+          "code": "k000187",
+          "label": "스노우 슈",
+          "species": "cat"
+        },
+        {
+          "code": "k000024",
+          "label": "복서",
+          "species": "dog"
+        },
+        {
+          "code": "k000141",
+          "label": "코카 푸",
+          "species": "dog"
+        },
+        {
+          "code": "k000160",
+          "label": "아메리칸 불독",
+          "species": "dog"
+        },
+        {
+          "code": "k000180",
+          "label": "봄베이",
+          "species": "cat"
+        },
+        {
+          "code": "k000177",
+          "label": "발리네즈",
+          "species": "cat"
+        },
+        {
+          "code": "k000119",
+          "label": "아메리칸 핏불 테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000127",
+          "label": "폭스테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000136",
+          "label": "실키테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000012",
+          "label": "바셋 하운드",
+          "species": "dog"
+        },
+        {
+          "code": "k000112",
+          "label": "폭스 테리어(와이어)",
+          "species": "dog"
+        },
+        {
+          "code": "k000042",
+          "label": "도고 아르젠티노",
+          "species": "dog"
+        },
+        {
+          "code": "k000047",
+          "label": "잉글리쉬 스프링거 스파니엘",
+          "species": "dog"
+        },
+        {
+          "code": "k000071",
+          "label": "라사 압소",
+          "species": "dog"
+        },
+        {
+          "code": "k000116",
+          "label": "고양이",
+          "species": "cat"
+        },
+        {
+          "code": "k000080",
+          "label": "미텔 스피츠",
+          "species": "dog"
+        },
+        {
+          "code": "k000217",
+          "label": "오스트레일리안 켈피",
+          "species": "dog"
+        },
+        {
+          "code": "k000230",
+          "label": "저먼 쇼트헤어드 포인터",
+          "species": "dog"
+        },
+        {
+          "code": "k000091",
+          "label": "풀리",
+          "species": "dog"
+        },
+        {
+          "code": "k000228",
+          "label": "러프콜리",
+          "species": "dog"
+        },
+        {
+          "code": "k000106",
+          "label": "티베탄 마스티프",
+          "species": "dog"
+        },
+        {
+          "code": "k000143",
+          "label": "오브차카",
+          "species": "dog"
+        },
+        {
+          "code": "k000109",
+          "label": "웰시 테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000082",
+          "label": "뉴펀들랜드",
+          "species": "dog"
+        },
+        {
+          "code": "k000057",
+          "label": "아이리쉬 세터",
+          "species": "dog"
+        },
+        {
+          "code": "k000173",
+          "label": "레그돌-라가머핀",
+          "species": "cat"
+        },
+        {
+          "code": "k000145",
+          "label": "코카시안 오브차카(코카시안 셰퍼드 독)",
+          "species": "dog"
+        },
+        {
+          "code": "k211",
+          "label": "웨스트 시베리언 라이카",
+          "species": "dog"
+        },
+        {
+          "code": "k000129",
+          "label": "제페니즈칭",
+          "species": "dog"
+        },
+        {
+          "code": "k000073",
+          "label": "마스티프",
+          "species": "dog"
+        },
+        {
+          "code": "k000162",
+          "label": "비즐라",
+          "species": "dog"
+        },
+        {
+          "code": "k000235",
+          "label": "화이트 스위스 세퍼드",
+          "species": "dog"
+        },
+        {
+          "code": "k000226",
+          "label": "벨지안 셰퍼드 독(마리노이즈)",
+          "species": "dog"
+        },
+        {
+          "code": "k000014",
+          "label": "비어디드 콜리",
+          "species": "dog"
+        },
+        {
+          "code": "k000156",
+          "label": "제주개",
+          "species": "dog"
+        },
+        {
+          "code": "k000132",
+          "label": "스코티시 디어하운드",
+          "species": "dog"
+        },
+        {
+          "code": "k000223",
+          "label": "로트와일러 믹스견",
+          "species": "dog"
+        },
+        {
+          "code": "k000161",
+          "label": "프레사까나리오",
+          "species": "dog"
+        },
+        {
+          "code": "k000168",
+          "label": "프렌치 브리타니",
+          "species": "dog"
+        },
+        {
+          "code": "k000165",
+          "label": "저먼 와이어헤어드 포인터",
+          "species": "dog"
+        },
+        {
+          "code": "k000157",
+          "label": "벨기에 쉽독",
+          "species": "dog"
+        },
+        {
+          "code": "k000147",
+          "label": "플롯하운드",
+          "species": "dog"
+        },
+        {
+          "code": "k000154",
+          "label": "스태퍼드셔 불 테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000059",
+          "label": "아이리쉬 소프트 코티드 휘튼 테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000065",
+          "label": "키슈",
+          "species": "dog"
+        },
+        {
+          "code": "k000133",
+          "label": "바센지",
+          "species": "dog"
+        },
+        {
+          "code": "k000144",
+          "label": "카이훗",
+          "species": "dog"
+        },
+        {
+          "code": "k000220",
+          "label": "아메리칸 핏불 테리어 믹스견",
+          "species": "dog"
+        },
+        {
+          "code": "k000029",
+          "label": "케니스펜더",
+          "species": "dog"
+        },
+        {
+          "code": "k000191",
+          "label": "싱가퓨라",
+          "species": "cat"
+        },
+        {
+          "code": "k000043",
+          "label": "도고 까니리오",
+          "species": "dog"
+        },
+        {
+          "code": "k000098",
+          "label": "실리햄 테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000186",
+          "label": "소말리",
+          "species": "cat"
+        },
+        {
+          "code": "k000234",
+          "label": "체코슬로바이칸 울프독",
+          "species": "dog"
+        },
+        {
+          "code": "k000207",
+          "label": "케언 테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000010",
+          "label": "오스트랄리안 캐틀 독",
+          "species": "dog"
+        },
+        {
+          "code": "k000166",
+          "label": "로디지안 리즈백 ",
+          "species": "dog"
+        },
+        {
+          "code": "k000203",
+          "label": "아메리칸 스태퍼드셔 테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000031",
+          "label": "센트럴 아시안 오브차카",
+          "species": "dog"
+        },
+        {
+          "code": "k000095",
+          "label": "살루키",
+          "species": "dog"
+        },
+        {
+          "code": "k000246",
+          "label": "웰시 스프링어 스패니얼",
+          "species": "dog"
+        },
+        {
+          "code": "k000064",
+          "label": "케리 블루 테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000209",
+          "label": "파라오 하운드",
+          "species": "dog"
+        },
+        {
+          "code": "k000183",
+          "label": "샤트룩스",
+          "species": "cat"
+        },
+        {
+          "code": "k000053",
+          "label": "자이언트 슈나우져",
+          "species": "dog"
+        },
+        {
+          "code": "k000239",
+          "label": "캉갈 셰퍼드 독",
+          "species": "dog"
+        },
+        {
+          "code": "k000202",
+          "label": "아나톨리안 셰퍼드",
+          "species": "dog"
+        },
+        {
+          "code": "k000058",
+          "label": "아이리쉬 울프 하운드",
+          "species": "dog"
+        },
+        {
+          "code": "k000011",
+          "label": "오스트랄리안 셰퍼드 독",
+          "species": "dog"
+        },
+        {
+          "code": "k000019",
+          "label": "블랙 테리어",
+          "species": "dog"
+        },
+        {
+          "code": "k000210",
+          "label": "아이리쉬 레드 앤 화이트 세터",
+          "species": "dog"
+        },
+        {
+          "code": "k000033",
+          "label": "차이니즈 크레스티드 독",
+          "species": "dog"
+        },
+        {
+          "code": "k000063",
+          "label": "키스 훈드",
+          "species": "dog"
+        }
+      ]
+    },
+    "color": {
+      "sources": [
+        "공공 colorCd — 자유 텍스트(2024+ 고유값 6,098개), 위 정규화 규칙으로 토큰화 후 매핑",
+        "사용자 color 자유 입력 — 같은 규칙, '모름' 허용"
+      ],
+      "note": "색과 무늬(고등어·삼색·턱시도 등)를 한 속성으로 취급한다 — 실데이터 표기가 둘을 구분하지 않고, 자카드 집합에서는 원소가 늘어날 뿐 해가 없다",
+      "values": [
+        {
+          "code": "white",
+          "label": "흰색",
+          "aliases": [
+            "흰",
+            "백",
+            "백색",
+            "하양",
+            "하얀색",
+            "화이트",
+            "흰색"
+          ]
+        },
+        {
+          "code": "black",
+          "label": "검정",
+          "aliases": [
+            "검정색",
+            "검은색",
+            "검",
+            "흑",
+            "흑색",
+            "블랙",
+            "까망",
+            "까만색"
+          ]
+        },
+        {
+          "code": "brown",
+          "label": "갈색",
+          "aliases": [
+            "갈",
+            "밤색",
+            "고동색",
+            "쵸콜릿색",
+            "초콜릿색",
+            "초코색",
+            "적갈색",
+            "적갈",
+            "진갈색",
+            "브라운",
+            "연갈색",
+            "연갈",
+            "옅은갈색",
+            "연한갈색",
+            "밤갈색",
+            "갈색믹스"
+          ]
+        },
+        {
+          "code": "cream",
+          "label": "크림",
+          "aliases": [
+            "크림색",
+            "아이보리",
+            "아이보리색",
+            "미색",
+            "베이지",
+            "베이지색",
+            "살구색"
+          ]
+        },
+        {
+          "code": "gray",
+          "label": "회색",
+          "aliases": [
+            "회",
+            "은색",
+            "은회색",
+            "청회색",
+            "진회색",
+            "어두운회색",
+            "울프그레이",
+            "그레이"
+          ]
+        },
+        {
+          "code": "yellow",
+          "label": "노랑",
+          "aliases": [
+            "노란색",
+            "노랑색",
+            "노",
+            "황색",
+            "황",
+            "금색",
+            "겨자색",
+            "누런색",
+            "레몬색",
+            "연노랑",
+            "연황색",
+            "옅은황색",
+            "황토색"
+          ]
+        },
+        {
+          "code": "tan",
+          "label": "황갈색",
+          "aliases": [
+            "탄",
+            "황갈",
+            "금갈색"
+          ]
+        },
+        {
+          "code": "orange",
+          "label": "주황",
+          "aliases": [
+            "주황색",
+            "치즈",
+            "치즈색",
+            "오렌지"
+          ]
+        },
+        {
+          "code": "tricolor",
+          "label": "삼색",
+          "aliases": [
+            "삼색이",
+            "카오스",
+            "삼색고양이"
+          ]
+        },
+        {
+          "code": "mackerel",
+          "label": "고등어",
+          "aliases": [
+            "고등어색",
+            "고등어태비",
+            "고등어테비",
+            "고등어무늬"
+          ]
+        },
+        {
+          "code": "tabby",
+          "label": "줄무늬",
+          "aliases": [
+            "태비",
+            "테비",
+            "검정줄무늬",
+            "갈색줄무늬",
+            "부분줄무늬",
+            "전체줄무늬",
+            "평행줄무늬"
+          ]
+        },
+        {
+          "code": "tuxedo",
+          "label": "턱시도",
+          "aliases": []
+        },
+        {
+          "code": "cow",
+          "label": "젖소",
+          "aliases": [
+            "바둑이",
+            "젖소무늬"
+          ]
+        },
+        {
+          "code": "brindle",
+          "label": "호피",
+          "aliases": [
+            "호피색",
+            "호피무늬",
+            "호반색",
+            "호반색호랑이무늬",
+            "브린들"
+          ]
+        },
+        {
+          "code": "spotted",
+          "label": "얼룩",
+          "aliases": [
+            "얼룩무늬",
+            "점박이",
+            "얼룩이"
+          ]
+        }
+      ],
+      "ignore_tokens": [
+        "엷은",
+        "옅은",
+        "연한",
+        "진한",
+        "밝은",
+        "어둡고",
+        "어두운",
+        "붉고",
+        "옅은색",
+        "부분",
+        "전체",
+        "평행",
+        "바탕에",
+        "흰색에",
+        "검정에",
+        "등쪽은",
+        "얼굴과",
+        "다리쪽은",
+        "무늬",
+        "혼합",
+        "혼합색",
+        "믹스",
+        "또는",
+        "한가지색",
+        "두가지색의",
+        "세가지색",
+        "명확한",
+        "조합"
+      ],
+      "compound_aliases": {
+        "흑백": [
+          "black",
+          "white"
+        ],
+        "흑백색": [
+          "black",
+          "white"
+        ],
+        "검흰": [
+          "black",
+          "white"
+        ],
+        "흰검": [
+          "black",
+          "white"
+        ],
+        "검백": [
+          "black",
+          "white"
+        ],
+        "백흑": [
+          "black",
+          "white"
+        ],
+        "검백색": [
+          "black",
+          "white"
+        ],
+        "백흑색": [
+          "black",
+          "white"
+        ],
+        "검흰색": [
+          "black",
+          "white"
+        ],
+        "흰검정": [
+          "black",
+          "white"
+        ],
+        "흰검정색": [
+          "black",
+          "white"
+        ],
+        "검정흰색": [
+          "black",
+          "white"
+        ],
+        "흰색검정": [
+          "black",
+          "white"
+        ],
+        "검은색흰색": [
+          "black",
+          "white"
+        ],
+        "검정색흰색": [
+          "black",
+          "white"
+        ],
+        "검갈": [
+          "black",
+          "brown"
+        ],
+        "갈검": [
+          "black",
+          "brown"
+        ],
+        "검갈색": [
+          "black",
+          "brown"
+        ],
+        "갈검색": [
+          "black",
+          "brown"
+        ],
+        "흑갈": [
+          "black",
+          "brown"
+        ],
+        "흑갈색": [
+          "black",
+          "brown"
+        ],
+        "갈흑": [
+          "black",
+          "brown"
+        ],
+        "검정갈색": [
+          "black",
+          "brown"
+        ],
+        "갈색검정": [
+          "black",
+          "brown"
+        ],
+        "갈백": [
+          "brown",
+          "white"
+        ],
+        "백갈": [
+          "brown",
+          "white"
+        ],
+        "흰갈": [
+          "brown",
+          "white"
+        ],
+        "갈흰": [
+          "brown",
+          "white"
+        ],
+        "흰갈색": [
+          "brown",
+          "white"
+        ],
+        "갈백색": [
+          "brown",
+          "white"
+        ],
+        "백갈색": [
+          "brown",
+          "white"
+        ],
+        "흰색갈색": [
+          "brown",
+          "white"
+        ],
+        "갈색흰색": [
+          "brown",
+          "white"
+        ],
+        "흰연갈색": [
+          "brown",
+          "white"
+        ],
+        "흰회색": [
+          "gray",
+          "white"
+        ],
+        "회색흰색": [
+          "gray",
+          "white"
+        ],
+        "회백": [
+          "gray",
+          "white"
+        ],
+        "회백색": [
+          "gray",
+          "white"
+        ],
+        "황백": [
+          "yellow",
+          "white"
+        ],
+        "백황": [
+          "yellow",
+          "white"
+        ],
+        "황백색": [
+          "yellow",
+          "white"
+        ],
+        "황색흰색": [
+          "yellow",
+          "white"
+        ],
+        "흰색황토색": [
+          "yellow",
+          "white"
+        ],
+        "노흰": [
+          "yellow",
+          "white"
+        ],
+        "흰노": [
+          "yellow",
+          "white"
+        ],
+        "흑황": [
+          "black",
+          "yellow"
+        ],
+        "황흑": [
+          "black",
+          "yellow"
+        ],
+        "흑황색": [
+          "black",
+          "yellow"
+        ],
+        "검황색": [
+          "black",
+          "yellow"
+        ],
+        "검갈흰": [
+          "black",
+          "brown",
+          "white"
+        ],
+        "갈검흰": [
+          "black",
+          "brown",
+          "white"
+        ],
+        "흰갈검": [
+          "black",
+          "brown",
+          "white"
+        ],
+        "흰검갈": [
+          "black",
+          "brown",
+          "white"
+        ],
+        "갈검흰색": [
+          "black",
+          "brown",
+          "white"
+        ],
+        "검갈색흰색": [
+          "black",
+          "brown",
+          "white"
+        ],
+        "갈흑백": [
+          "black",
+          "brown",
+          "white"
+        ],
+        "흑갈백": [
+          "black",
+          "brown",
+          "white"
+        ],
+        "황백흑": [
+          "black",
+          "yellow",
+          "white"
+        ],
+        "흑황백": [
+          "black",
+          "yellow",
+          "white"
+        ],
+        "황흑백": [
+          "black",
+          "yellow",
+          "white"
+        ],
+        "흑황백색": [
+          "black",
+          "yellow",
+          "white"
+        ],
+        "검은색흰색황토색조합": [
+          "black",
+          "white",
+          "yellow"
+        ],
+        "블랙탄": [
+          "black",
+          "tan"
+        ],
+        "검은반점": [
+          "black",
+          "spotted"
+        ],
+        "검줄": [
+          "black",
+          "tabby"
+        ],
+        "치즈태비": [
+          "orange",
+          "tabby"
+        ],
+        "치즈테비": [
+          "orange",
+          "tabby"
+        ],
+        "치즈무늬": [
+          "orange"
+        ],
+        "회색얼룩무늬": [
+          "gray",
+          "spotted"
+        ],
+        "검정얼룩무늬": [
+          "black",
+          "spotted"
+        ],
+        "반점": [
+          "spotted"
+        ],
+        "회갈색": [
+          "gray",
+          "brown"
+        ],
+        "회갈": [
+          "gray",
+          "brown"
+        ],
+        "검회색": [
+          "black",
+          "gray"
+        ],
+        "검회": [
+          "black",
+          "gray"
+        ],
+        "검정회색": [
+          "black",
+          "gray"
+        ],
+        "흑회색": [
+          "black",
+          "gray"
+        ],
+        "칼리코": [
+          "tricolor"
+        ],
+        "재색": [
+          "gray"
+        ],
+        "실버": [
+          "gray"
+        ],
+        "연회색": [
+          "gray"
+        ],
+        "회색회청색": [
+          "gray"
+        ],
+        "흰색베이지": [
+          "white",
+          "cream"
+        ],
+        "흰색크림색": [
+          "white",
+          "cream"
+        ],
+        "살색": [
+          "cream"
+        ],
+        "황구": [
+          "yellow"
+        ],
+        "노랑둥이": [
+          "yellow"
+        ],
+        "노란": [
+          "yellow"
+        ],
+        "황토": [
+          "yellow"
+        ],
+        "흰황색": [
+          "yellow",
+          "white"
+        ],
+        "황흰": [
+          "yellow",
+          "white"
+        ],
+        "황흰색": [
+          "yellow",
+          "white"
+        ],
+        "노흰색": [
+          "yellow",
+          "white"
+        ],
+        "노랑흰색": [
+          "yellow",
+          "white"
+        ],
+        "흰색황색": [
+          "yellow",
+          "white"
+        ],
+        "황토색흰색": [
+          "yellow",
+          "white"
+        ],
+        "백황색": [
+          "yellow",
+          "white"
+        ],
+        "흰색검은색": [
+          "black",
+          "white"
+        ],
+        "백검": [
+          "black",
+          "white"
+        ],
+        "흰검색": [
+          "black",
+          "white"
+        ],
+        "흰색회색": [
+          "gray",
+          "white"
+        ],
+        "회흰": [
+          "gray",
+          "white"
+        ],
+        "흰회": [
+          "gray",
+          "white"
+        ],
+        "갈흰색": [
+          "brown",
+          "white"
+        ],
+        "갈흑색": [
+          "brown",
+          "black"
+        ],
+        "진갈": [
+          "brown"
+        ],
+        "다갈": [
+          "brown"
+        ],
+        "밝은갈색": [
+          "brown"
+        ],
+        "짙은갈색": [
+          "brown"
+        ],
+        "진한갈색": [
+          "brown"
+        ],
+        "갈줄": [
+          "brown",
+          "tabby"
+        ],
+        "갈색태비": [
+          "brown",
+          "tabby"
+        ],
+        "백갈흑": [
+          "white",
+          "brown",
+          "black"
+        ],
+        "백흑갈": [
+          "white",
+          "brown",
+          "black"
+        ],
+        "갈백흑": [
+          "white",
+          "brown",
+          "black"
+        ],
+        "백갈흑색": [
+          "white",
+          "brown",
+          "black"
+        ],
+        "흑갈백색": [
+          "white",
+          "brown",
+          "black"
+        ],
+        "검정황색": [
+          "black",
+          "yellow"
+        ],
+        "검황": [
+          "black",
+          "yellow"
+        ],
+        "반고등어": [
+          "mackerel"
+        ],
+        "회색고등어": [
+          "gray",
+          "mackerel"
+        ]
+      }
+    },
+    "size": {
+      "sources": [
+        "공공 weight — 위 weight_to_size 규칙으로 파싱(결측 0%, 파싱 실패 0.02%)",
+        "사용자 입력 — 현재 ERD animal_case에 크기·체중 필드가 없어 사용자 게시물은 size 태그를 만들 수 없음. 선택 입력 필드 신설(모름 허용)은 팀 합의 안건"
+      ],
+      "asymmetry_note": "필드 신설 전까지 size는 공공 건에만 생기는 비대칭 태그다 — 한쪽에만 있는 태그는 자카드 합집합만 키워 유사도를 낮추므로, 자카드 생성기는 양쪽 모두 size 태그가 있을 때만 포함하거나 사용자 필드 신설까지 size를 제외한다(생성기 옵션으로 결정)",
+      "values": [
+        {
+          "code": "small",
+          "label": "소형 (8kg 미만)",
+          "aliases": [
+            "소형",
+            "소형견",
+            "작음"
+          ]
+        },
+        {
+          "code": "medium",
+          "label": "중형 (8~20kg)",
+          "aliases": [
+            "중형",
+            "중형견",
+            "보통"
+          ]
+        },
+        {
+          "code": "large",
+          "label": "대형 (20kg 이상)",
+          "aliases": [
+            "대형",
+            "대형견",
+            "큼"
+          ]
+        }
+      ],
+      "distribution_2024plus": {
+        "small": 0.772,
+        "medium": 0.178,
+        "large": 0.05
+      }
+    }
+  }
+}

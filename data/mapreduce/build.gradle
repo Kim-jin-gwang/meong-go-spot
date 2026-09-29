@@ -1,0 +1,37 @@
+// MapReduce 5종 알고리즘 모듈 — 클러스터 JVM(Java 17)과 버전을 맞춘다 (backend는 21).
+// hadoop-client는 compileOnly: 잡은 `hadoop jar`로 실행되어 런타임 클래스패스를
+// 클러스터가 제공하므로 thin jar면 충분하다.
+plugins {
+    id 'java'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+// 소스의 한글 주석 — OS 기본 인코딩(Windows CP949)에 좌우되지 않게 고정
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.apache.hadoop:hadoop-client:3.5.0'
+    // 테스트는 Configuration 같은 하둡 타입을 직접 쓴다 — compileOnly 는 테스트 클래스패스에 오지 않으므로 별도 선언
+    testImplementation 'org.apache.hadoop:hadoop-client:3.5.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    archiveBaseName = 'mungo-mapreduce'
+}

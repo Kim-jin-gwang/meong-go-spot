@@ -1,0 +1,61 @@
+[Unit]
+Description=멍고반점 매칭 엔진 — worker 의 MATCH_ENGINE_URL 상주 서비스 (data/match_engine)
+# 후보는 compose 의 postgres(루프백 5432), 질의 사진·스냅샷은 서버 2 WebHDFS 에서 읽는다.
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/match-engine
+
+# DSN 은 setup-match-db.sh 가 만든 ubuntu:ubuntu 0600 파일에 있다.
+EnvironmentFile=/home/ubuntu/.secrets/match/match-engine.env
+Environment=MATCH_ENGINE_BIND=127.0.0.1
+Environment=MATCH_ENGINE_PORT=8091
+Environment=MATCH_ENGINE_SNAPSHOT_DIR=/home/ubuntu/match-engine/snapshot
+Environment=MATCH_ENGINE_WEBHDFS=http://bd-master:9870
+# backend 가 사진을 쓰는 HDFS 사용자(compose PHOTO_HDFS_USER)와 같아야 0600 사진이 읽힌다.
+Environment=MATCH_ENGINE_HDFS_USER=ubuntu
+Environment=MATCH_ENGINE_AI_DIR=/home/ubuntu/ai
+# 계약 §후보 출력 정책 0-2·0-3 (2026-09-14 확정). 모델이 바뀌면 eval_aggregation.py 로 다시 정한 값을 여기 적는다.
+Environment=MATCH_ENGINE_MODEL_ID=dinov2_vitb14
+Environment=MATCH_ENGINE_MODEL_VERSION=v2
+Environment=MATCH_ENGINE_THRESHOLD=0.60
+Environment=MATCH_ENGINE_TOP_K=20
+# 후보 지역: 지역 코드 앞 2자리(시·도). 후보가 너무 적다는 피드백이 오면 0(전국)으로 넓힌다 — 임계값 0.60 은 후보 100마리 조건에서 정했다.
+Environment=MATCH_ENGINE_REGION_PREFIX_LEN=2
+Environment=MATCH_ENGINE_SNAPSHOT_REFRESH_SECONDS=600
+Environment=PYTHONIOENCODING=utf-8
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=OMP_NUM_THREADS=3
+# ProtectHome=read-only 라 ~/.config·~/.cache 를 못 쓴다 — 쓰기 허용된 작업 디렉터리 아래로 돌린다.
+Environment=YOLO_CONFIG_DIR=/home/ubuntu/match-engine/.ultralytics
+Environment=TORCH_HOME=/home/ubuntu/match-engine/.torch
+
+# ai venv(torch·numpy·psycopg). 모델 로딩 ~10초 + 스냅샷 1.4GB 로딩 ~10초.
+ExecStart=/home/ubuntu/ai/.venv/bin/python /home/ubuntu/match-engine/engine.py
+Restart=always
+RestartSec=10
+TimeoutStartSec=180
+
+# 서버 1 은 사용자 API(backend)와 같은 4코어다. 임베딩이 CPU 를 다 먹지 않게 3코어·낮은 우선순위로 묶고,
+# 모델 1.4GB + 스냅샷 1.4GB + torch 여유를 넘는 누수는 죽여서 다시 띄운다.
+CPUQuota=300%
+Nice=5
+MemoryMax=6G
+
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+# 스냅샷 교체가 홈 아래 디렉터리를 바꿔 쓴다 — 그 경로만 쓰기 허용.
+ProtectHome=read-only
+ReadWritePaths=/home/ubuntu/match-engine
+ProtectControlGroups=yes
+ProtectKernelTunables=yes
+RestrictSUIDSGID=yes
+
+[Install]
+WantedBy=multi-user.target

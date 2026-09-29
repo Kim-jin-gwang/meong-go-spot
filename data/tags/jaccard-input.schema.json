@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://meong-go-spot/tags/jaccard-input.schema.json",
+  "title": "자카드 셀프조인 입력 — 게시 건별 속성 태그 집합",
+  "description": "MapReduce 자카드 셀프조인의 입력 한 줄(JSONL). 태그 원천은 사용자 입력·공공 API 필드의 통제 어휘 정규화이며(사진 추론 아님 — 팀 합의 대기 제안), 집합 원소는 vocabulary.json의 canonical 코드다. '모름'·결측·매핑 불가 값은 태그를 생략한다(집합 미포함) — 공통 '미상' 토큰은 가짜 유사도를 만들기 때문이다.",
+  "type": "object",
+  "required": ["case_id", "source", "vocab_version", "tags"],
+  "additionalProperties": false,
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "게시 건 식별자. 사용자 게시물은 PostgreSQL animal_case.id 문자열, 공공 건은 desertionNo. 태그 원천이 게시 건 단위 입력값이므로 사진ID가 아니라 게시 건 ID가 집합의 키다."
+    },
+    "source": {
+      "type": "string",
+      "enum": ["USER_POST", "SHELTER"],
+      "description": "태그 원천 구분 — 사용자 게시물 입력값 / 공공 API 필드"
+    },
+    "vocab_version": {
+      "type": "string",
+      "description": "적용한 통제 어휘 버전 (vocabulary.json의 vocab_version). 어휘 개정 시 신구 집합을 섞지 않기 위한 격리 키",
+      "examples": ["tags-v1"]
+    },
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^(species|breed|color|size):[a-z0-9-]+$",
+        "description": "'<속성>:<canonical 코드>' 형식. 코드는 vocabulary.json에 존재해야 한다"
+      },
+      "description": "자카드 집합. 속성별 0~n개(색은 복합 표기가 있어 2개 이상 가능), 빈 배열 허용(전부 모름인 게시물)"
+    }
+  },
+  "examples": [
+    {
+      "case_id": "448547202601053",
+      "source": "SHELTER",
+      "vocab_version": "tags-v1",
+      "tags": ["species:dog", "breed:k000072", "color:white", "size:small"]
+    },
+    {
+      "case_id": "1042",
+      "source": "USER_POST",
+      "vocab_version": "tags-v1",
+      "tags": ["species:cat", "color:black", "color:white"]
+    }
+  ]
+}

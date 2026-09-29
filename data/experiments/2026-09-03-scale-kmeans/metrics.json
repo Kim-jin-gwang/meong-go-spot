@@ -1,0 +1,207 @@
+{
+  "2nodes_combiner": {
+    "wall_seconds": 247.0,
+    "jobs": [
+      {
+        "job_id": "job_1788154081519_0037",
+        "hdfs_read_bytes": 2449417877,
+        "hdfs_written_bytes": 127181,
+        "map_tasks": 19,
+        "reduce_tasks": 1,
+        "data_local_maps": 19,
+        "all_maps_ms": 499685,
+        "all_reduces_ms": 39114,
+        "map_input_records": 2000000,
+        "map_output_records": 2000000,
+        "map_output_bytes": 2447185624,
+        "combine_input_records": 2000000,
+        "combine_output_records": 1850,
+        "shuffle_bytes": 4328064,
+        "reduce_input_records": 1850,
+        "gc_ms": 8727,
+        "cpu_ms": 243630
+      },
+      {
+        "job_id": "job_1788154081519_0038",
+        "hdfs_read_bytes": 2450677767,
+        "hdfs_written_bytes": 116813,
+        "map_tasks": 20,
+        "reduce_tasks": 1,
+        "data_local_maps": 20,
+        "all_maps_ms": 537211,
+        "all_reduces_ms": 43275,
+        "map_input_records": 2000000,
+        "map_output_records": 2000000,
+        "map_output_bytes": 2447185624,
+        "combine_input_records": 2000000,
+        "combine_output_records": 1702,
+        "shuffle_bytes": 4007036,
+        "reduce_input_records": 1702,
+        "gc_ms": 7679,
+        "cpu_ms": 255210
+      },
+      {
+        "job_id": "job_1788154081519_0039",
+        "hdfs_read_bytes": 2450480775,
+        "hdfs_written_bytes": 22503556,
+        "map_tasks": 19,
+        "data_local_maps": 19,
+        "all_maps_ms": 333168,
+        "map_input_records": 2000000,
+        "map_output_records": 2000000,
+        "gc_ms": 5522,
+        "cpu_ms": 164260
+      }
+    ]
+  },
+  "1node_combiner": {
+    "wall_seconds": 390.0,
+    "jobs": [
+      {
+        "job_id": "job_1788400090651_0001",
+        "hdfs_read_bytes": 2449417877,
+        "hdfs_written_bytes": 127181,
+        "map_tasks": 19,
+        "reduce_tasks": 1,
+        "data_local_maps": 19,
+        "all_maps_ms": 425213,
+        "all_reduces_ms": 46815,
+        "map_input_records": 2000000,
+        "map_output_records": 2000000,
+        "map_output_bytes": 2447185624,
+        "combine_input_records": 2000000,
+        "combine_output_records": 1850,
+        "shuffle_bytes": 4328064,
+        "reduce_input_records": 1850,
+        "gc_ms": 7383,
+        "cpu_ms": 249970
+      },
+      {
+        "job_id": "job_1788400090651_0002",
+        "hdfs_read_bytes": 2450677767,
+        "hdfs_written_bytes": 116813,
+        "map_tasks": 19,
+        "reduce_tasks": 1,
+        "data_local_maps": 19,
+        "all_maps_ms": 397725,
+        "all_reduces_ms": 72559,
+        "map_input_records": 2000000,
+        "map_output_records": 2000000,
+        "map_output_bytes": 2447185624,
+        "combine_input_records": 2000000,
+        "combine_output_records": 1702,
+        "shuffle_bytes": 4007036,
+        "reduce_input_records": 1702,
+        "gc_ms": 6620,
+        "cpu_ms": 254870
+      },
+      {
+        "job_id": "job_1788400090651_0003",
+        "hdfs_read_bytes": 2450480775,
+        "hdfs_written_bytes": 22503556,
+        "map_tasks": 20,
+        "data_local_maps": 20,
+        "all_maps_ms": 352643,
+        "map_input_records": 2000000,
+        "map_output_records": 2000000,
+        "gc_ms": 6501,
+        "cpu_ms": 166340
+      }
+    ]
+  },
+  "2nodes_nocombiner_failed": {
+    "wall_seconds": 0.0,
+    "jobs": [
+      {
+        "job_id": "job_1788400090651_0004",
+        "hdfs_read_bytes": 2449417877,
+        "hdfs_written_bytes": 127290,
+        "map_tasks": 21,
+        "reduce_tasks": 2,
+        "data_local_maps": 21,
+        "all_maps_ms": 507588,
+        "all_reduces_ms": 96187,
+        "map_input_records": 2000000,
+        "map_output_records": 2000000,
+        "map_output_bytes": 2447185624,
+        "combine_input_records": 0,
+        "combine_output_records": 0,
+        "shuffle_bytes": 2455185738,
+        "reduce_input_records": 2000000,
+        "gc_ms": 6935,
+        "cpu_ms": 251940
+      },
+      {
+        "job_id": "job_1788400090651_0005",
+        "hdfs_read_bytes": 1880889052,
+        "hdfs_written_bytes": 0,
+        "map_tasks": 20,
+        "reduce_tasks": 4,
+        "data_local_maps": 20,
+        "all_maps_ms": 457977,
+        "all_reduces_ms": 19899,
+        "map_input_records": 1535243,
+        "map_output_records": 1535243,
+        "map_output_bytes": 1878514376,
+        "combine_input_records": 0,
+        "gc_ms": 4417,
+        "cpu_ms": 162630
+      }
+    ]
+  },
+  "2nodes_nocombiner_3g": {
+    "wall_seconds": 295.0,
+    "jobs": [
+      {
+        "job_id": "job_1788400090651_0006",
+        "hdfs_read_bytes": 2449417877,
+        "hdfs_written_bytes": 127230,
+        "map_tasks": 19,
+        "reduce_tasks": 1,
+        "data_local_maps": 19,
+        "all_maps_ms": 391731,
+        "all_reduces_ms": 49227,
+        "map_input_records": 2000000,
+        "map_output_records": 2000000,
+        "map_output_bytes": 2447185624,
+        "combine_input_records": 0,
+        "combine_output_records": 0,
+        "shuffle_bytes": 2455185738,
+        "reduce_input_records": 2000000,
+        "gc_ms": 5938,
+        "cpu_ms": 246040
+      },
+      {
+        "job_id": "job_1788400090651_0007",
+        "hdfs_read_bytes": 2450678698,
+        "hdfs_written_bytes": 116812,
+        "map_tasks": 19,
+        "reduce_tasks": 1,
+        "data_local_maps": 19,
+        "all_maps_ms": 366350,
+        "all_reduces_ms": 46988,
+        "map_input_records": 2000000,
+        "map_output_records": 2000000,
+        "map_output_bytes": 2447185624,
+        "combine_input_records": 0,
+        "combine_output_records": 0,
+        "shuffle_bytes": 2455185738,
+        "reduce_input_records": 2000000,
+        "gc_ms": 5692,
+        "cpu_ms": 263160
+      },
+      {
+        "job_id": "job_1788400090651_0008",
+        "hdfs_read_bytes": 2450480756,
+        "hdfs_written_bytes": 22503556,
+        "map_tasks": 20,
+        "data_local_maps": 20,
+        "all_maps_ms": 386239,
+        "map_input_records": 2000000,
+        "map_output_records": 2000000,
+        "gc_ms": 6158,
+        "cpu_ms": 162530
+      }
+    ]
+  }
+}

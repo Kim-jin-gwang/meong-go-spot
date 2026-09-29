@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 아이콘 이미지의 배경과 같은 베이지다. 전경 이미지의 사각형 경계가 이 색에 묻힌다. -->
+    <color name="ic_launcher_background">#FEE0B3</color>
+</resources>

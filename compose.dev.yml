@@ -1,0 +1,43 @@
+# 로컬 개발용 — PostgreSQL·Redis(백엔드)와 Kafka(수집기 개발)를 제공한다.
+# FE/BE는 네이티브로 실행하는 것이 기준이다 (npm run dev:fe / dev:be — README 참조).
+# 사용: docker compose -f compose.dev.yml up -d postgres redis   (백엔드 개발)
+#       docker compose -f compose.dev.yml up -d kafka      (수집기 개발 — 서버 Kafka는 UFW로 외부 차단)
+#
+# 기본값은 로컬 개발 전용이다. 운영 값은 절대 여기 쓰지 않는다.
+services:
+  postgres:
+    image: postgres:17-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-app}
+      POSTGRES_USER: ${POSTGRES_USER:-app}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-app-local-only}
+    volumes:
+      - postgres-dev-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  redis:
+    image: redis:7.4-alpine
+    ports:
+      - "127.0.0.1:6379:6379"
+    command: ["redis-server", "--maxmemory-policy", "noeviction", "--requirepass", "redis-local-only"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "redis-local-only", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  kafka:
+    image: apache/kafka:4.2.1  # 서버(bd-master)와 동일 버전
+    ports:
+      - "9092:9092"
+    # 공식 이미지는 기본값으로 KRaft 단일 노드 + localhost:9092 광고 리스너로 뜬다.
+    # 데이터는 컨테이너 안에만 두므로(볼륨 없음) 내리면 초기화 — 로컬 개발엔 그게 편하다.
+
+volumes:
+  postgres-dev-data:

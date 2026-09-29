@@ -1,0 +1,37 @@
+# 활성 모델 스펙 — docs/data-ai-interface.md §4 "모델 = 가중치 + 전처리 한 덩어리".
+# 가중치나 전처리(입력 크기·정규화·풀링·탐지 마스킹·크롭 규격)를 바꾸면 반드시 model_version을 올린다.
+# v2: YOLO26l-seg 탐지·마스킹·크롭 전처리 추가 (#56) — v1 임베딩과 벡터를 섞지 않는다.
+model_id: dinov2_vitb14
+model_version: v2
+dim: 768
+input_size: 224
+pooling: cls
+normalized: true
+
+# 임베딩 전처리 스펙 — 배치·온디맨드가 반드시 공유하는 값 (RGB 변환 → 224×224 bicubic 직접 리사이즈
+# → [0,1] 스케일 → ImageNet 평균·표준편차 정규화)
+interpolation: bicubic
+mean: [0.485, 0.456, 0.406]
+std: [0.229, 0.224, 0.225]
+
+# 가중치 아티팩트 — torch.hub(facebookresearch/dinov2) 아키텍처 + 공식 사전학습 .pth.
+# 대용량 바이너리라 Git에 커밋하지 않으며, 경로는 설정 주입으로 덮어쓸 수 있다.
+hub_repo: facebookresearch/dinov2
+weights_path: /home/ubuntu/ai/models/dinov2-vitb14/dinov2_vitb14_pretrain.pth
+
+# 탐지·마스킹·크롭 전처리 스펙 (app/detect.py) — 임베딩 입력을 만드는 앞단이므로
+# 아래 값(임계값·패딩·배경 채움·다중 개체 정책 포함)을 바꾸는 것도 model_version 상향 대상이다.
+detector:
+  detector_id: yolo26l-seg
+  detector_version: v1
+  weights_path: /home/ubuntu/ai/models/yolo26l-seg/yolo26l-seg.pt
+  # COCO 클래스 ID — 15: cat, 16: dog (이 둘만 탐지 대상)
+  target_classes: [15, 16]
+  # 이 신뢰도 미만 탐지는 버린다. 남는 탐지가 없으면 원본 전체 사용 폴백 (fallback: true)
+  conf_threshold: 0.5
+  # bbox를 각 변 길이의 이 비율만큼 사방으로 확장한 뒤 크롭 (이미지 경계에서 클램프)
+  bbox_padding_ratio: 0.08
+  # 마스크 밖 배경 채움 — zero(검정) | mean(이미지 평균색)
+  background_fill: zero
+  # 다중 개체 처리 — highest_confidence: 최고 신뢰도 개체 1개만 사용
+  multi_object_policy: highest_confidence

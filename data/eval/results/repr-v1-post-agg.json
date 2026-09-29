@@ -1,0 +1,1050 @@
+{
+ "gallery_size": 469,
+ "entities": 328,
+ "dim": 768,
+ "pos_pairs": 120,
+ "k": [
+  1,
+  5,
+  10
+ ],
+ "methods": [
+  "max",
+  "mean",
+  "rep1",
+  "mean_max"
+ ],
+ "include": {
+  "gallery_photos": 469,
+  "candidate_entities": 328,
+  "methods": {
+   "max": {
+    "overall": {
+     "recall@1": 0.4741,
+     "recall@5": 0.7672,
+     "recall@10": 0.8707,
+     "mrr": 0.6018,
+     "n": 116,
+     "median_rank": 2
+    },
+    "by_band": {
+     "easy": {
+      "recall@1": 0.9474,
+      "recall@5": 0.9737,
+      "recall@10": 1.0,
+      "mrr": 0.9649,
+      "n": 38,
+      "median_rank": 1
+     },
+     "hard": {
+      "recall@1": 0.027,
+      "recall@5": 0.2973,
+      "recall@10": 0.5946,
+      "mrr": 0.1768,
+      "n": 37,
+      "median_rank": 8
+     },
+     "mid": {
+      "recall@1": 0.439,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.6488,
+      "n": 41,
+      "median_rank": 2
+     }
+    },
+    "by_species": {
+     "개": {
+      "recall@1": 0.5439,
+      "recall@5": 0.7895,
+      "recall@10": 0.9123,
+      "mrr": 0.6545,
+      "n": 57,
+      "median_rank": 1
+     },
+     "고양이": {
+      "recall@1": 0.3864,
+      "recall@5": 0.7273,
+      "recall@10": 0.7955,
+      "mrr": 0.5271,
+      "n": 44,
+      "median_rank": 2
+     },
+     "기타": {
+      "recall@1": 0.4667,
+      "recall@5": 0.8,
+      "recall@10": 0.9333,
+      "mrr": 0.6208,
+      "n": 15,
+      "median_rank": 2
+     }
+    },
+    "by_query_quality": {
+     "blur": {
+      "recall@1": 0.0,
+      "recall@5": 0.25,
+      "recall@10": 0.25,
+      "mrr": 0.136,
+      "n": 4,
+      "median_rank": 13
+     },
+     "dark": {
+      "recall@1": 0.2,
+      "recall@5": 0.8,
+      "recall@10": 0.8,
+      "mrr": 0.4525,
+      "n": 5,
+      "median_rank": 2
+     },
+     "good": {
+      "recall@1": 0.5231,
+      "recall@5": 0.8154,
+      "recall@10": 0.9077,
+      "mrr": 0.6392,
+      "n": 65,
+      "median_rank": 1
+     },
+     "occluded": {
+      "recall@1": 0.4595,
+      "recall@5": 0.7027,
+      "recall@10": 0.8649,
+      "mrr": 0.5889,
+      "n": 37,
+      "median_rank": 2
+     },
+     "small": {
+      "recall@1": 0.6,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.7333,
+      "n": 5,
+      "median_rank": 1
+     }
+    },
+    "no_animal_pairs": {
+     "recall@1": 0.0,
+     "recall@5": 0.0,
+     "recall@10": 0.0,
+     "mrr": 0.0038,
+     "n": 4,
+     "median_rank": 278
+    },
+    "dropped": 0
+   },
+   "mean": {
+    "overall": {
+     "recall@1": 0.6121,
+     "recall@5": 0.8621,
+     "recall@10": 0.9224,
+     "mrr": 0.7173,
+     "n": 116,
+     "median_rank": 1
+    },
+    "by_band": {
+     "easy": {
+      "recall@1": 0.9737,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.9803,
+      "n": 38,
+      "median_rank": 1
+     },
+     "hard": {
+      "recall@1": 0.1351,
+      "recall@5": 0.5676,
+      "recall@10": 0.7568,
+      "mrr": 0.3254,
+      "n": 37,
+      "median_rank": 5
+     },
+     "mid": {
+      "recall@1": 0.7073,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.8272,
+      "n": 41,
+      "median_rank": 1
+     }
+    },
+    "by_species": {
+     "개": {
+      "recall@1": 0.7193,
+      "recall@5": 0.8947,
+      "recall@10": 0.9298,
+      "mrr": 0.7917,
+      "n": 57,
+      "median_rank": 1
+     },
+     "고양이": {
+      "recall@1": 0.5,
+      "recall@5": 0.8182,
+      "recall@10": 0.9091,
+      "mrr": 0.6368,
+      "n": 44,
+      "median_rank": 1
+     },
+     "기타": {
+      "recall@1": 0.5333,
+      "recall@5": 0.8667,
+      "recall@10": 0.9333,
+      "mrr": 0.6708,
+      "n": 15,
+      "median_rank": 1
+     }
+    },
+    "by_query_quality": {
+     "blur": {
+      "recall@1": 0.0,
+      "recall@5": 0.25,
+      "recall@10": 0.75,
+      "mrr": 0.2076,
+      "n": 4,
+      "median_rank": 7
+     },
+     "dark": {
+      "recall@1": 0.8,
+      "recall@5": 0.8,
+      "recall@10": 1.0,
+      "mrr": 0.8286,
+      "n": 5,
+      "median_rank": 1
+     },
+     "good": {
+      "recall@1": 0.6154,
+      "recall@5": 0.8923,
+      "recall@10": 0.9231,
+      "mrr": 0.7274,
+      "n": 65,
+      "median_rank": 1
+     },
+     "occluded": {
+      "recall@1": 0.6486,
+      "recall@5": 0.8649,
+      "recall@10": 0.9189,
+      "mrr": 0.7375,
+      "n": 37,
+      "median_rank": 1
+     },
+     "small": {
+      "recall@1": 0.6,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.7333,
+      "n": 5,
+      "median_rank": 1
+     }
+    },
+    "no_animal_pairs": {
+     "recall@1": 0.0,
+     "recall@5": 0.0,
+     "recall@10": 0.0,
+     "mrr": 0.0054,
+     "n": 4,
+     "median_rank": 222
+    },
+    "dropped": 0
+   },
+   "rep1": {
+    "overall": {
+     "recall@1": 0.5172,
+     "recall@5": 0.8448,
+     "recall@10": 0.8966,
+     "mrr": 0.643,
+     "n": 116,
+     "median_rank": 1
+    },
+    "by_band": {
+     "easy": {
+      "recall@1": 0.9737,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.9825,
+      "n": 38,
+      "median_rank": 1
+     },
+     "hard": {
+      "recall@1": 0.0811,
+      "recall@5": 0.5135,
+      "recall@10": 0.6757,
+      "mrr": 0.2541,
+      "n": 37,
+      "median_rank": 5
+     },
+     "mid": {
+      "recall@1": 0.4878,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.6793,
+      "n": 41,
+      "median_rank": 2
+     }
+    },
+    "by_species": {
+     "개": {
+      "recall@1": 0.5614,
+      "recall@5": 0.8772,
+      "recall@10": 0.9123,
+      "mrr": 0.6822,
+      "n": 57,
+      "median_rank": 1
+     },
+     "고양이": {
+      "recall@1": 0.4545,
+      "recall@5": 0.7727,
+      "recall@10": 0.8409,
+      "mrr": 0.5746,
+      "n": 44,
+      "median_rank": 2
+     },
+     "기타": {
+      "recall@1": 0.5333,
+      "recall@5": 0.9333,
+      "recall@10": 1.0,
+      "mrr": 0.6944,
+      "n": 15,
+      "median_rank": 1
+     }
+    },
+    "by_query_quality": {
+     "blur": {
+      "recall@1": 0.0,
+      "recall@5": 0.5,
+      "recall@10": 0.75,
+      "mrr": 0.244,
+      "n": 4,
+      "median_rank": 5
+     },
+     "dark": {
+      "recall@1": 0.6,
+      "recall@5": 0.8,
+      "recall@10": 1.0,
+      "mrr": 0.6733,
+      "n": 5,
+      "median_rank": 1
+     },
+     "good": {
+      "recall@1": 0.5385,
+      "recall@5": 0.8769,
+      "recall@10": 0.9077,
+      "mrr": 0.6615,
+      "n": 65,
+      "median_rank": 1
+     },
+     "occluded": {
+      "recall@1": 0.5135,
+      "recall@5": 0.8108,
+      "recall@10": 0.8649,
+      "mrr": 0.6372,
+      "n": 37,
+      "median_rank": 1
+     },
+     "small": {
+      "recall@1": 0.6,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.7333,
+      "n": 5,
+      "median_rank": 1
+     }
+    },
+    "no_animal_pairs": {
+     "recall@1": 0.0,
+     "recall@5": 0.0,
+     "recall@10": 0.0,
+     "mrr": 0.0044,
+     "n": 4,
+     "median_rank": 250
+    },
+    "dropped": 0
+   },
+   "mean_max": {
+    "overall": {
+     "recall@1": 0.6034,
+     "recall@5": 0.8362,
+     "recall@10": 0.9224,
+     "mrr": 0.7071,
+     "n": 116,
+     "median_rank": 1
+    },
+    "by_band": {
+     "easy": {
+      "recall@1": 0.9737,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.9803,
+      "n": 38,
+      "median_rank": 1
+     },
+     "hard": {
+      "recall@1": 0.1081,
+      "recall@5": 0.4865,
+      "recall@10": 0.7568,
+      "mrr": 0.2933,
+      "n": 37,
+      "median_rank": 6
+     },
+     "mid": {
+      "recall@1": 0.7073,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.8272,
+      "n": 41,
+      "median_rank": 1
+     }
+    },
+    "by_species": {
+     "개": {
+      "recall@1": 0.7018,
+      "recall@5": 0.8947,
+      "recall@10": 0.9298,
+      "mrr": 0.7767,
+      "n": 57,
+      "median_rank": 1
+     },
+     "고양이": {
+      "recall@1": 0.5,
+      "recall@5": 0.75,
+      "recall@10": 0.9091,
+      "mrr": 0.6292,
+      "n": 44,
+      "median_rank": 1
+     },
+     "기타": {
+      "recall@1": 0.5333,
+      "recall@5": 0.8667,
+      "recall@10": 0.9333,
+      "mrr": 0.6708,
+      "n": 15,
+      "median_rank": 1
+     }
+    },
+    "by_query_quality": {
+     "blur": {
+      "recall@1": 0.0,
+      "recall@5": 0.25,
+      "recall@10": 0.75,
+      "mrr": 0.2041,
+      "n": 4,
+      "median_rank": 8
+     },
+     "dark": {
+      "recall@1": 0.8,
+      "recall@5": 0.8,
+      "recall@10": 1.0,
+      "mrr": 0.8286,
+      "n": 5,
+      "median_rank": 1
+     },
+     "good": {
+      "recall@1": 0.6154,
+      "recall@5": 0.8615,
+      "recall@10": 0.9231,
+      "mrr": 0.7227,
+      "n": 65,
+      "median_rank": 1
+     },
+     "occluded": {
+      "recall@1": 0.6216,
+      "recall@5": 0.8378,
+      "recall@10": 0.9189,
+      "mrr": 0.7141,
+      "n": 37,
+      "median_rank": 1
+     },
+     "small": {
+      "recall@1": 0.6,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.7333,
+      "n": 5,
+      "median_rank": 1
+     }
+    },
+    "no_animal_pairs": {
+     "recall@1": 0.0,
+     "recall@5": 0.0,
+     "recall@10": 0.0,
+     "mrr": 0.0049,
+     "n": 4,
+     "median_rank": 232
+    },
+    "dropped": 0
+   }
+  }
+ },
+ "exclude_no_animal": {
+  "gallery_photos": 464,
+  "candidate_entities": 327,
+  "methods": {
+   "max": {
+    "overall": {
+     "recall@1": 0.4741,
+     "recall@5": 0.7672,
+     "recall@10": 0.8707,
+     "mrr": 0.6018,
+     "n": 116,
+     "median_rank": 2
+    },
+    "by_band": {
+     "easy": {
+      "recall@1": 0.9474,
+      "recall@5": 0.9737,
+      "recall@10": 1.0,
+      "mrr": 0.9649,
+      "n": 38,
+      "median_rank": 1
+     },
+     "hard": {
+      "recall@1": 0.027,
+      "recall@5": 0.2973,
+      "recall@10": 0.5946,
+      "mrr": 0.1768,
+      "n": 37,
+      "median_rank": 8
+     },
+     "mid": {
+      "recall@1": 0.439,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.6488,
+      "n": 41,
+      "median_rank": 2
+     }
+    },
+    "by_species": {
+     "개": {
+      "recall@1": 0.5439,
+      "recall@5": 0.7895,
+      "recall@10": 0.9123,
+      "mrr": 0.6545,
+      "n": 57,
+      "median_rank": 1
+     },
+     "고양이": {
+      "recall@1": 0.3864,
+      "recall@5": 0.7273,
+      "recall@10": 0.7955,
+      "mrr": 0.5271,
+      "n": 44,
+      "median_rank": 2
+     },
+     "기타": {
+      "recall@1": 0.4667,
+      "recall@5": 0.8,
+      "recall@10": 0.9333,
+      "mrr": 0.6208,
+      "n": 15,
+      "median_rank": 2
+     }
+    },
+    "by_query_quality": {
+     "blur": {
+      "recall@1": 0.0,
+      "recall@5": 0.25,
+      "recall@10": 0.25,
+      "mrr": 0.136,
+      "n": 4,
+      "median_rank": 13
+     },
+     "dark": {
+      "recall@1": 0.2,
+      "recall@5": 0.8,
+      "recall@10": 0.8,
+      "mrr": 0.4525,
+      "n": 5,
+      "median_rank": 2
+     },
+     "good": {
+      "recall@1": 0.5231,
+      "recall@5": 0.8154,
+      "recall@10": 0.9077,
+      "mrr": 0.6392,
+      "n": 65,
+      "median_rank": 1
+     },
+     "occluded": {
+      "recall@1": 0.4595,
+      "recall@5": 0.7027,
+      "recall@10": 0.8649,
+      "mrr": 0.5889,
+      "n": 37,
+      "median_rank": 2
+     },
+     "small": {
+      "recall@1": 0.6,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.7333,
+      "n": 5,
+      "median_rank": 1
+     }
+    },
+    "no_animal_pairs": {
+     "recall@1": null,
+     "recall@5": null,
+     "recall@10": null,
+     "mrr": null,
+     "n": 0,
+     "median_rank": null
+    },
+    "dropped": 4
+   },
+   "mean": {
+    "overall": {
+     "recall@1": 0.6121,
+     "recall@5": 0.8621,
+     "recall@10": 0.9224,
+     "mrr": 0.7173,
+     "n": 116,
+     "median_rank": 1
+    },
+    "by_band": {
+     "easy": {
+      "recall@1": 0.9737,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.9803,
+      "n": 38,
+      "median_rank": 1
+     },
+     "hard": {
+      "recall@1": 0.1351,
+      "recall@5": 0.5676,
+      "recall@10": 0.7568,
+      "mrr": 0.3253,
+      "n": 37,
+      "median_rank": 5
+     },
+     "mid": {
+      "recall@1": 0.7073,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.8272,
+      "n": 41,
+      "median_rank": 1
+     }
+    },
+    "by_species": {
+     "개": {
+      "recall@1": 0.7193,
+      "recall@5": 0.8947,
+      "recall@10": 0.9298,
+      "mrr": 0.7916,
+      "n": 57,
+      "median_rank": 1
+     },
+     "고양이": {
+      "recall@1": 0.5,
+      "recall@5": 0.8182,
+      "recall@10": 0.9091,
+      "mrr": 0.6368,
+      "n": 44,
+      "median_rank": 1
+     },
+     "기타": {
+      "recall@1": 0.5333,
+      "recall@5": 0.8667,
+      "recall@10": 0.9333,
+      "mrr": 0.6708,
+      "n": 15,
+      "median_rank": 1
+     }
+    },
+    "by_query_quality": {
+     "blur": {
+      "recall@1": 0.0,
+      "recall@5": 0.25,
+      "recall@10": 0.75,
+      "mrr": 0.2076,
+      "n": 4,
+      "median_rank": 7
+     },
+     "dark": {
+      "recall@1": 0.8,
+      "recall@5": 0.8,
+      "recall@10": 1.0,
+      "mrr": 0.8286,
+      "n": 5,
+      "median_rank": 1
+     },
+     "good": {
+      "recall@1": 0.6154,
+      "recall@5": 0.8923,
+      "recall@10": 0.9231,
+      "mrr": 0.7274,
+      "n": 65,
+      "median_rank": 1
+     },
+     "occluded": {
+      "recall@1": 0.6486,
+      "recall@5": 0.8649,
+      "recall@10": 0.9189,
+      "mrr": 0.7375,
+      "n": 37,
+      "median_rank": 1
+     },
+     "small": {
+      "recall@1": 0.6,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.7333,
+      "n": 5,
+      "median_rank": 1
+     }
+    },
+    "no_animal_pairs": {
+     "recall@1": null,
+     "recall@5": null,
+     "recall@10": null,
+     "mrr": null,
+     "n": 0,
+     "median_rank": null
+    },
+    "dropped": 4
+   },
+   "rep1": {
+    "overall": {
+     "recall@1": 0.5172,
+     "recall@5": 0.8448,
+     "recall@10": 0.8966,
+     "mrr": 0.643,
+     "n": 116,
+     "median_rank": 1
+    },
+    "by_band": {
+     "easy": {
+      "recall@1": 0.9737,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.9825,
+      "n": 38,
+      "median_rank": 1
+     },
+     "hard": {
+      "recall@1": 0.0811,
+      "recall@5": 0.5135,
+      "recall@10": 0.6757,
+      "mrr": 0.2541,
+      "n": 37,
+      "median_rank": 5
+     },
+     "mid": {
+      "recall@1": 0.4878,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.6793,
+      "n": 41,
+      "median_rank": 2
+     }
+    },
+    "by_species": {
+     "개": {
+      "recall@1": 0.5614,
+      "recall@5": 0.8772,
+      "recall@10": 0.9123,
+      "mrr": 0.6822,
+      "n": 57,
+      "median_rank": 1
+     },
+     "고양이": {
+      "recall@1": 0.4545,
+      "recall@5": 0.7727,
+      "recall@10": 0.8409,
+      "mrr": 0.5746,
+      "n": 44,
+      "median_rank": 2
+     },
+     "기타": {
+      "recall@1": 0.5333,
+      "recall@5": 0.9333,
+      "recall@10": 1.0,
+      "mrr": 0.6944,
+      "n": 15,
+      "median_rank": 1
+     }
+    },
+    "by_query_quality": {
+     "blur": {
+      "recall@1": 0.0,
+      "recall@5": 0.5,
+      "recall@10": 0.75,
+      "mrr": 0.244,
+      "n": 4,
+      "median_rank": 5
+     },
+     "dark": {
+      "recall@1": 0.6,
+      "recall@5": 0.8,
+      "recall@10": 1.0,
+      "mrr": 0.6733,
+      "n": 5,
+      "median_rank": 1
+     },
+     "good": {
+      "recall@1": 0.5385,
+      "recall@5": 0.8769,
+      "recall@10": 0.9077,
+      "mrr": 0.6615,
+      "n": 65,
+      "median_rank": 1
+     },
+     "occluded": {
+      "recall@1": 0.5135,
+      "recall@5": 0.8108,
+      "recall@10": 0.8649,
+      "mrr": 0.6372,
+      "n": 37,
+      "median_rank": 1
+     },
+     "small": {
+      "recall@1": 0.6,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.7333,
+      "n": 5,
+      "median_rank": 1
+     }
+    },
+    "no_animal_pairs": {
+     "recall@1": null,
+     "recall@5": null,
+     "recall@10": null,
+     "mrr": null,
+     "n": 0,
+     "median_rank": null
+    },
+    "dropped": 4
+   },
+   "mean_max": {
+    "overall": {
+     "recall@1": 0.6034,
+     "recall@5": 0.8362,
+     "recall@10": 0.9224,
+     "mrr": 0.7071,
+     "n": 116,
+     "median_rank": 1
+    },
+    "by_band": {
+     "easy": {
+      "recall@1": 0.9737,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.9803,
+      "n": 38,
+      "median_rank": 1
+     },
+     "hard": {
+      "recall@1": 0.1081,
+      "recall@5": 0.4865,
+      "recall@10": 0.7568,
+      "mrr": 0.2933,
+      "n": 37,
+      "median_rank": 6
+     },
+     "mid": {
+      "recall@1": 0.7073,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.8272,
+      "n": 41,
+      "median_rank": 1
+     }
+    },
+    "by_species": {
+     "개": {
+      "recall@1": 0.7018,
+      "recall@5": 0.8947,
+      "recall@10": 0.9298,
+      "mrr": 0.7767,
+      "n": 57,
+      "median_rank": 1
+     },
+     "고양이": {
+      "recall@1": 0.5,
+      "recall@5": 0.75,
+      "recall@10": 0.9091,
+      "mrr": 0.6292,
+      "n": 44,
+      "median_rank": 1
+     },
+     "기타": {
+      "recall@1": 0.5333,
+      "recall@5": 0.8667,
+      "recall@10": 0.9333,
+      "mrr": 0.6708,
+      "n": 15,
+      "median_rank": 1
+     }
+    },
+    "by_query_quality": {
+     "blur": {
+      "recall@1": 0.0,
+      "recall@5": 0.25,
+      "recall@10": 0.75,
+      "mrr": 0.2041,
+      "n": 4,
+      "median_rank": 8
+     },
+     "dark": {
+      "recall@1": 0.8,
+      "recall@5": 0.8,
+      "recall@10": 1.0,
+      "mrr": 0.8286,
+      "n": 5,
+      "median_rank": 1
+     },
+     "good": {
+      "recall@1": 0.6154,
+      "recall@5": 0.8615,
+      "recall@10": 0.9231,
+      "mrr": 0.7227,
+      "n": 65,
+      "median_rank": 1
+     },
+     "occluded": {
+      "recall@1": 0.6216,
+      "recall@5": 0.8378,
+      "recall@10": 0.9189,
+      "mrr": 0.7141,
+      "n": 37,
+      "median_rank": 1
+     },
+     "small": {
+      "recall@1": 0.6,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.7333,
+      "n": 5,
+      "median_rank": 1
+     }
+    },
+    "no_animal_pairs": {
+     "recall@1": null,
+     "recall@5": null,
+     "recall@10": null,
+     "mrr": null,
+     "n": 0,
+     "median_rank": null
+    },
+    "dropped": 4
+   }
+  }
+ },
+ "divergent_pairs": [
+  {
+   "pair_id": "pos-0009",
+   "band": "hard",
+   "species": "개",
+   "q_quality": "good",
+   "t_quality": "good",
+   "rank_max": 203,
+   "rank_mean": 118,
+   "rank_rep1": 136,
+   "rank_mean_max": 131
+  },
+  {
+   "pair_id": "pos-0091",
+   "band": "hard",
+   "species": "고양이",
+   "q_quality": "good",
+   "t_quality": "occluded",
+   "rank_max": 73,
+   "rank_mean": 26,
+   "rank_rep1": 54,
+   "rank_mean_max": 28
+  },
+  {
+   "pair_id": "pos-0081",
+   "band": "hard",
+   "species": "고양이",
+   "q_quality": "occluded",
+   "t_quality": "dark",
+   "rank_max": 39,
+   "rank_mean": 17,
+   "rank_rep1": 32,
+   "rank_mean_max": 20
+  },
+  {
+   "pair_id": "pos-0072",
+   "band": "hard",
+   "species": "고양이",
+   "q_quality": "occluded",
+   "t_quality": "dark",
+   "rank_max": 25,
+   "rank_mean": 6,
+   "rank_rep1": 23,
+   "rank_mean_max": 9
+  },
+  {
+   "pair_id": "pos-0030",
+   "band": "hard",
+   "species": "개",
+   "q_quality": "good",
+   "t_quality": "occluded",
+   "rank_max": 35,
+   "rank_mean": 21,
+   "rank_rep1": 20,
+   "rank_mean_max": 27
+  },
+  {
+   "pair_id": "pos-0003",
+   "band": "hard",
+   "species": "개",
+   "q_quality": "good",
+   "t_quality": "good",
+   "rank_max": 31,
+   "rank_mean": 19,
+   "rank_rep1": 21,
+   "rank_mean_max": 21
+  },
+  {
+   "pair_id": "pos-0105",
+   "band": "hard",
+   "species": "기타",
+   "q_quality": "blur",
+   "t_quality": "good",
+   "rank_max": 16,
+   "rank_mean": 16,
+   "rank_rep1": 4,
+   "rank_mean_max": 16
+  },
+  {
+   "pair_id": "pos-0039",
+   "band": "hard",
+   "species": "개",
+   "q_quality": "good",
+   "t_quality": "good",
+   "rank_max": 36,
+   "rank_mean": 25,
+   "rank_rep1": 31,
+   "rank_mean_max": 28
+  },
+  {
+   "pair_id": "pos-0000",
+   "band": "hard",
+   "species": "개",
+   "q_quality": "good",
+   "t_quality": "good",
+   "rank_max": 13,
+   "rank_mean": 3,
+   "rank_rep1": 11,
+   "rank_mean_max": 4
+  },
+  {
+   "pair_id": "pos-0066",
+   "band": "hard",
+   "species": "고양이",
+   "q_quality": "dark",
+   "t_quality": "dark",
+   "rank_max": 16,
+   "rank_mean": 7,
+   "rank_rep1": 6,
+   "rank_mean_max": 7
+  }
+ ],
+ "dataset": "datasets/repr-v1",
+ "vectors_source": [
+  "vectors",
+  "vectors-samples"
+ ]
+}

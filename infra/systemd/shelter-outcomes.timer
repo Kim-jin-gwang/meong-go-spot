@@ -1,0 +1,13 @@
+[Unit]
+Description=보호소 결과 통계 배치 — 매주 월요일 00:40 KST
+
+[Timer]
+# 3년 창의 통계는 하루 사이에 거의 변하지 않는다. 야간 적재(23:10·23:20)와 겹치지 않는 새벽에 주 1회.
+OnCalendar=Mon *-*-* 00:40:00 Asia/Seoul
+RandomizedDelaySec=300
+# 놓친 실행은 부팅 후 한 번 따라잡는다. upsert 라 몇 번 돌아도 같다.
+Persistent=true
+Unit=shelter-outcomes.service
+
+[Install]
+WantedBy=timers.target

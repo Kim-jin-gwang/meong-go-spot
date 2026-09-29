@@ -1,0 +1,76 @@
+{
+ "pairs_evaluated": 2000,
+ "gallery_size": 452470,
+ "k": [
+  1,
+  5,
+  10,
+  20
+ ],
+ "overall": {
+  "recall@1": 0.0,
+  "recall@5": 0.0,
+  "recall@10": 0.0,
+  "recall@20": 0.0,
+  "mrr": 0.0,
+  "n": 2000,
+  "median_rank": 219970
+ },
+ "seconds": 7.8,
+ "by_fallback": {
+  "both_detected": {
+   "recall@1": 0.0,
+   "recall@5": 0.0,
+   "recall@10": 0.0,
+   "recall@20": 0.0,
+   "mrr": 0.0,
+   "n": 1617,
+   "median_rank": 216113
+  },
+  "both_fallback": {
+   "recall@1": 0.0,
+   "recall@5": 0.0,
+   "recall@10": 0.0,
+   "recall@20": 0.0,
+   "mrr": 0.0,
+   "n": 85,
+   "median_rank": 247744
+  },
+  "one_fallback": {
+   "recall@1": 0.0,
+   "recall@5": 0.0,
+   "recall@10": 0.0,
+   "recall@20": 0.0,
+   "mrr": 0.0,
+   "n": 298,
+   "median_rank": 234479
+  }
+ },
+ "by_up_kind": {
+  "417000": {
+   "recall@1": 0.0,
+   "recall@5": 0.0,
+   "recall@10": 0.0,
+   "recall@20": 0.0,
+   "mrr": 0.0,
+   "n": 1384,
+   "median_rank": 218664
+  },
+  "422400": {
+   "recall@1": 0.0,
+   "recall@5": 0.0,
+   "recall@10": 0.0,
+   "recall@20": 0.0,
+   "mrr": 0.0,
+   "n": 598,
+   "median_rank": 222749
+  }
+ },
+ "shelter_bias": {
+  "n": 760,
+  "same_shelter_mean_cos": -0.0006,
+  "random_mean_cos": 0.0034
+ },
+ "random_baseline": true,
+ "vectors_dir": "vectors"
+}

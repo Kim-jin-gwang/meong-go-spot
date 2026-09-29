@@ -1,0 +1,22 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{java,kt,kts,py}]
+indent_size = 4
+
+[*.{kt,kts}]
+# Compose 함수는 PascalCase — ktlint 함수 네이밍 규칙에서 제외
+ktlint_function_naming_ignore_when_annotated_with = Composable
+
+[*.{md,markdown}]
+trim_trailing_whitespace = false
+
+[*.{bat,cmd}]
+end_of_line = crlf

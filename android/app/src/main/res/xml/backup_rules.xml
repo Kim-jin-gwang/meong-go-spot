@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <exclude domain="sharedpref" path="meonggocuisine_auth_tokens.xml" />
+    <exclude domain="sharedpref" path="meonggocuisine_push_device.xml" />
+    <exclude domain="sharedpref" path="meonggocuisine_chat_push.xml" />
+    <exclude domain="sharedpref" path="meonggocuisine_notification_permission.xml" />
+</full-backup-content>

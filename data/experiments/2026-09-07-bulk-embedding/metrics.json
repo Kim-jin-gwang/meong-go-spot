@@ -1,0 +1,229 @@
+{
+ "months": {
+  "202401": {
+   "images": 8276,
+   "embedded": 8276,
+   "fallback": 780,
+   "errors": 0
+  },
+  "202402": {
+   "images": 7534,
+   "embedded": 7534,
+   "fallback": 812,
+   "errors": 0
+  },
+  "202403": {
+   "images": 8243,
+   "embedded": 8243,
+   "fallback": 940,
+   "errors": 0
+  },
+  "202404": {
+   "images": 9542,
+   "embedded": 9542,
+   "fallback": 1174,
+   "errors": 0
+  },
+  "202405": {
+   "images": 11389,
+   "embedded": 11389,
+   "fallback": 1264,
+   "errors": 0
+  },
+  "202406": {
+   "images": 12155,
+   "embedded": 12155,
+   "fallback": 1268,
+   "errors": 0
+  },
+  "202407": {
+   "images": 21029,
+   "embedded": 21029,
+   "fallback": 2704,
+   "errors": 0
+  },
+  "202408": {
+   "images": 17381,
+   "embedded": 17381,
+   "fallback": 2141,
+   "errors": 0
+  },
+  "202409": {
+   "images": 16927,
+   "embedded": 16927,
+   "fallback": 2093,
+   "errors": 0
+  },
+  "202410": {
+   "images": 19553,
+   "embedded": 19553,
+   "fallback": 2780,
+   "errors": 0
+  },
+  "202411": {
+   "images": 15135,
+   "embedded": 15135,
+   "fallback": 1822,
+   "errors": 0
+  },
+  "202412": {
+   "images": 13401,
+   "embedded": 13401,
+   "fallback": 1569,
+   "errors": 0
+  },
+  "202501": {
+   "images": 11401,
+   "embedded": 11401,
+   "fallback": 1311,
+   "errors": 0
+  },
+  "202502": {
+   "images": 11890,
+   "embedded": 11889,
+   "fallback": 1390,
+   "errors": 1
+  },
+  "202503": {
+   "images": 14032,
+   "embedded": 14032,
+   "fallback": 1745,
+   "errors": 0
+  },
+  "202504": {
+   "images": 16306,
+   "embedded": 16306,
+   "fallback": 2285,
+   "errors": 0
+  },
+  "202505": {
+   "images": 18547,
+   "embedded": 18547,
+   "fallback": 2380,
+   "errors": 0
+  },
+  "202506": {
+   "images": 18317,
+   "embedded": 18317,
+   "fallback": 2470,
+   "errors": 0
+  },
+  "202507": {
+   "images": 17073,
+   "embedded": 17073,
+   "fallback": 2125,
+   "errors": 0
+  },
+  "202508": {
+   "images": 15079,
+   "embedded": 15079,
+   "fallback": 1687,
+   "errors": 0
+  },
+  "202509": {
+   "images": 17549,
+   "embedded": 17549,
+   "fallback": 1980,
+   "errors": 0
+  },
+  "202510": {
+   "images": 15673,
+   "embedded": 15673,
+   "fallback": 1685,
+   "errors": 0
+  },
+  "202511": {
+   "images": 13015,
+   "embedded": 13015,
+   "fallback": 1426,
+   "errors": 0
+  },
+  "202512": {
+   "images": 11493,
+   "embedded": 11493,
+   "fallback": 1275,
+   "errors": 0
+  },
+  "202601": {
+   "images": 10564,
+   "embedded": 10564,
+   "fallback": 1146,
+   "errors": 0
+  },
+  "202602": {
+   "images": 9316,
+   "embedded": 9316,
+   "fallback": 1105,
+   "errors": 0
+  },
+  "202603": {
+   "images": 12434,
+   "embedded": 12434,
+   "fallback": 1747,
+   "errors": 0
+  },
+  "202604": {
+   "images": 14112,
+   "embedded": 14112,
+   "fallback": 1937,
+   "errors": 0
+  },
+  "202605": {
+   "images": 16970,
+   "embedded": 16970,
+   "fallback": 2267,
+   "errors": 0
+  },
+  "202606": {
+   "images": 17464,
+   "embedded": 17464,
+   "fallback": 1937,
+   "errors": 0
+  },
+  "202607": {
+   "images": 16090,
+   "embedded": 16090,
+   "fallback": 1941,
+   "errors": 0
+  },
+  "202608": {
+   "images": 13461,
+   "embedded": 13461,
+   "fallback": 1478,
+   "errors": 0
+  },
+  "202609": {
+   "images": 1120,
+   "embedded": 1120,
+   "fallback": 101,
+   "errors": 0
+  }
+ },
+ "images_total": 452471,
+ "embedded_total": 452470,
+ "fallback_total": 54765,
+ "errors_total": 1,
+ "hdfs_bytes": 3370498314,
+ "model": {
+  "model_id": "dinov2_vitb14",
+  "model_version": "v2",
+  "dim": 768,
+  "normalized": true,
+  "detector": "yolo26l-seg v1"
+ },
+ "runtime": {
+  "gpu": "NVIDIA L40S 46GB, Device 1 (bus 0x61)",
+  "torch": "2.11.0+cu128",
+  "driver": "570.211.01 / CUDA 12.8",
+  "throughput_img_per_s": {
+   "min": 6.6,
+   "median": 19.5,
+   "max": 29.6,
+   "overall": 19.0
+  },
+  "wall_clock": "2026-09-07 ~15:00 → 21:56 KST (~7h incl. transfers)",
+  "embedding_seconds_total": 23830.0,
+  "tars_over_1000_images": 235
+ },
+ "source": "HDFS detections-*.jsonl 집계 + GPU 러너 지표(runner-metrics.json, 2026-09-07 회수)"
+}

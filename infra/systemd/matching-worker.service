@@ -1,0 +1,32 @@
+[Unit]
+Description=멍고반점 매칭 worker — match_run PENDING 선점 → 엔진 호출 → match_candidate 적재 (data/matching_worker)
+After=network-online.target docker.service match-engine.service
+Wants=network-online.target match-engine.service
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/matching-worker
+
+# MATCH_WORKER_POSTGRES_DSN 과 MATCH_ENGINE_URL(루프백 8091) — setup-match-db.sh 가 만든 0600 파일.
+EnvironmentFile=/home/ubuntu/.secrets/match/match-worker.env
+Environment=PYTHONIOENCODING=utf-8
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+
+# worker 는 psycopg 만 필요하다 — 엔진과 같은 venv 를 쓴다 (따로 만들 이유가 없다).
+ExecStart=/home/ubuntu/ai/.venv/bin/python -m data.matching_worker.worker --poll-seconds 2
+Restart=always
+RestartSec=10
+
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=read-only
+ProtectControlGroups=yes
+ProtectKernelTunables=yes
+RestrictSUIDSGID=yes
+
+[Install]
+WantedBy=multi-user.target

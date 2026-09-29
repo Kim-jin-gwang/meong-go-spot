@@ -1,0 +1,22 @@
+[Unit]
+Description=Mungo on-demand matching worker
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/matching-worker-app
+EnvironmentFile=/home/ubuntu/matching-worker.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/ubuntu/matching-worker-venv/bin/python -m data.matching_worker.worker
+Restart=on-failure
+RestartSec=5s
+TimeoutStopSec=70s
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+
+[Install]
+WantedBy=multi-user.target

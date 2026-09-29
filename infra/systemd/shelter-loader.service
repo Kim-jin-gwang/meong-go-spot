@@ -1,0 +1,39 @@
+[Unit]
+Description=공공 보호동물 원문 Kafka -> PostgreSQL 적재
+# 적재 대상은 docker compose 의 postgres 컨테이너이고 Kafka 는 서버 2 다.
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=ubuntu
+Group=ubuntu
+
+# DSN 은 setup-loader-db.sh 가 만든 ubuntu:ubuntu 0600 파일에 있다 (다른 계정은 못 읽는다).
+# EnvironmentFile 은 PID 1 이 읽으므로 경로가 ubuntu 홈 밖으로 옮겨져도 단위 수정이 필요 없다.
+EnvironmentFile=/home/ubuntu/.secrets/loader/shelter-loader.env
+EnvironmentFile=/home/ubuntu/shelter-loader/loader.env
+
+# 로케일이 없으면 한글 진행 메시지 출력이 UnicodeEncodeError 로 죽는다. 스크립트도 stdout 을
+# UTF-8 로 고정하지만 여기서도 못 박아 둔다.
+Environment=PYTHONIOENCODING=utf-8
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+
+ExecStart=/usr/local/sbin/run-shelter-loader.sh
+
+# 첫 전체 적재가 11,626건에 수 분이었다. 여유를 두되 무한정 물고 있지는 않게 한다.
+TimeoutStartSec=1800
+
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+# ProtectSystem 은 /home 을 덮지 않는다 — 적재기는 홈에서 읽기만 하므로 따로 막는다.
+# (PYTHONDONTWRITEBYTECODE 로 __pycache__ 쓰기도 없다.)
+ProtectHome=read-only
+ProtectControlGroups=yes
+ProtectKernelTunables=yes
+RestrictSUIDSGID=yes
+
+[Install]
+WantedBy=multi-user.target

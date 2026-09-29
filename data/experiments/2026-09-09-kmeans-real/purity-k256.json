@@ -1,0 +1,63 @@
+{
+ "assignments": "index-k256/assignments",
+ "size": {
+  "clusters": 256,
+  "min": 107,
+  "median": 1654,
+  "max": 4687,
+  "p90": 2814,
+  "total": 452486
+ },
+ "up_kind": {
+  "n": 452486,
+  "clusters": 256,
+  "labels": 3,
+  "purity": 0.9895,
+  "majority_label_share": 0.7017,
+  "top_labels": [
+   {
+    "label": "417000",
+    "share": 0.7017
+   },
+   {
+    "label": "422400",
+    "share": 0.2813
+   },
+   {
+    "label": "429900",
+    "share": 0.0169
+   }
+  ],
+  "random_purity": 0.7017
+ },
+ "kind": {
+  "n": 452486,
+  "clusters": 256,
+  "labels": 195,
+  "purity": 0.857,
+  "majority_label_share": 0.5462,
+  "top_labels": [
+   {
+    "label": "000114",
+    "share": 0.5462
+   },
+   {
+    "label": "000200",
+    "share": 0.2306
+   },
+   {
+    "label": "000212",
+    "share": 0.0364
+   },
+   {
+    "label": "000128",
+    "share": 0.0271
+   },
+   {
+    "label": "000072",
+    "share": 0.0236
+   }
+  ],
+  "random_purity": 0.5462
+ }
+}

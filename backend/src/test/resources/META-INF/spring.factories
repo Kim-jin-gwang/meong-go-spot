@@ -1,0 +1,2 @@
+org.springframework.context.ApplicationContextInitializer=\
+com.meonggo.backend.auth.config.EphemeralJwtKeyInitializer
