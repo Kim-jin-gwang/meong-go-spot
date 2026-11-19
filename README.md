@@ -5,6 +5,8 @@
 > **Project Date:** 2026.08 ~ 2026.09 · **6인 팀 프로젝트**
 >
 > **Platform:** Android 앱 (Kotlin + Jetpack Compose) · Spring Boot API · Hadoop 2노드 클러스터
+>
+> **Live Demo:** [demo-gateway.trealight112.workers.dev/meonggo](https://demo-gateway.trealight112.workers.dev/meonggo/) — 실종 등록 · 유사도 분석 · 입양 소개팅 화면을 예시 자료로 옮긴 웹 데모
 
 잃어버린 반려동물의 사진을 **전국 보호소 입소 동물(공공 데이터, 매일 갱신)** 과 AI 임베딩 유사도로 대조해, **45만 장이 넘는 보호소 사진 중에서 닮은 후보를 최대 20마리** 찾아주는 유기동물 라이프사이클(실종 → 구조 → 보호 → 입양/반환) 플랫폼입니다.
 
